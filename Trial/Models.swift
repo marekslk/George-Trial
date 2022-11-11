@@ -4,12 +4,14 @@
 
 import Foundation
 
+// MARK: APIError
 public enum APIError: Error {
     
     case randomError
     
 }
 
+// MARK: Transaction
 public struct Transaction: Decodable {
     
     let id: String
@@ -50,6 +52,7 @@ public struct Transaction: Decodable {
     
 }
 
+// MARK: AccountNumber
 public struct AccountNumber: Decodable {
     
     let iban: String?
@@ -61,6 +64,7 @@ public struct AccountNumber: Decodable {
     
 }
 
+// MARK: AdditionalTexts
 public struct AdditionalTexts: Decodable {
     
     let text1: String
@@ -73,6 +77,7 @@ public struct AdditionalTexts: Decodable {
     
 }
 
+// MARK: Amount
 public struct Amount: Decodable {
     
     let value: Int
@@ -105,6 +110,7 @@ extension Amount {
     
 }
 
+// MARK: NSDecimalNumber Extensions
 extension NSDecimalNumber {
     
     var integerValueWithPrecision2: Int {
@@ -138,7 +144,7 @@ extension NSDecimalNumber {
     
 }
 
-
+// MARK: TransactionResponse
 public struct TransactionResponse: Decodable {
     
     let collection: [Transaction]
