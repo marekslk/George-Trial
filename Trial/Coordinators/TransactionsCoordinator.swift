@@ -35,6 +35,9 @@ final class TransactionsCoordinator: TransactionsCoordinating {
             }
         )
         let viewController = UIHostingController(rootView: transactionsView)
+        viewController.navigationItem.largeTitleDisplayMode = .always
+        // We need to set title for VC here instead of SwiftUI 
+        viewController.title = "transactions.title".localized
         navigationController.setViewControllers([viewController], animated: false)
     }
 }

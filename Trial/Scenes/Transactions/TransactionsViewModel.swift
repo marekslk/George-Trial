@@ -10,13 +10,12 @@ import Foundation
 import Combine
 import SwiftUI
 
-//- title, subtitle, additionalTexts.lineItems and amount of the transaction in the list of transactions.
-
 struct TransactionItem: Identifiable {
     let id: String
     let title: String
     let subtitle: String?
     let additionalTexts: [String]
+    let amountFormatted: String
 }
 
 final class TransactionsViewModel: ObservableObject {
@@ -53,11 +52,20 @@ final class TransactionsViewModel: ObservableObject {
 
     private func transactionItems(from transactions: [Transaction]) -> [TransactionItem] {
         transactions.map { transaction in
-            TransactionItem(
+            let amountHumanReadable = Double(transaction.amount.decimalValue.integerValueWithPrecision2) / 100
+            let currency = transaction.amount.currency
+            var amountFormatted = "\(amountHumanReadable) \(currency)"
+
+            if amountHumanReadable > 0 {
+                amountFormatted = "+\(amountFormatted)"
+            }
+
+            return TransactionItem(
                 id: transaction.id,
                 title: transaction.title,
                 subtitle: transaction.subtitle,
-                additionalTexts: transaction.additionalTexts.lineItems
+                additionalTexts: transaction.additionalTexts.lineItems,
+                amountFormatted: amountFormatted
             )
         }
     }

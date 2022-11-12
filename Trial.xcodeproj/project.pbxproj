@@ -11,6 +11,8 @@
 		8F125E49291FE381005DF57E /* TransactionsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F125E48291FE381005DF57E /* TransactionsViewModel.swift */; };
 		8FA2B36E291FF84B0010BD9B /* ViewModelingState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8FA2B36D291FF84B0010BD9B /* ViewModelingState.swift */; };
 		8FA2B370291FFD430010BD9B /* TransactionsCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8FA2B36F291FFD430010BD9B /* TransactionsCoordinator.swift */; };
+		8FA2B373292001160010BD9B /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 8FA2B375292001160010BD9B /* Localizable.strings */; };
+		8FA2B377292001760010BD9B /* String+localized.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8FA2B376292001760010BD9B /* String+localized.swift */; };
 		8FF0E9CA291F7B1700DA2D3D /* NSDecimalNumberExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8FF0E9C9291F7B1700DA2D3D /* NSDecimalNumberExtensions.swift */; };
 		8FF0E9CC291F7C2500DA2D3D /* Coordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8FF0E9CB291F7C2500DA2D3D /* Coordinator.swift */; };
 		8FF0E9CE291F7D7000DA2D3D /* InitialSceneCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8FF0E9CD291F7D7000DA2D3D /* InitialSceneCoordinator.swift */; };
@@ -44,6 +46,8 @@
 		8F125E48291FE381005DF57E /* TransactionsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransactionsViewModel.swift; sourceTree = "<group>"; };
 		8FA2B36D291FF84B0010BD9B /* ViewModelingState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewModelingState.swift; sourceTree = "<group>"; };
 		8FA2B36F291FFD430010BD9B /* TransactionsCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransactionsCoordinator.swift; sourceTree = "<group>"; };
+		8FA2B374292001160010BD9B /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
+		8FA2B376292001760010BD9B /* String+localized.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+localized.swift"; sourceTree = "<group>"; };
 		8FF0E9C9291F7B1700DA2D3D /* NSDecimalNumberExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NSDecimalNumberExtensions.swift; sourceTree = "<group>"; };
 		8FF0E9CB291F7C2500DA2D3D /* Coordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Coordinator.swift; sourceTree = "<group>"; };
 		8FF0E9CD291F7D7000DA2D3D /* InitialSceneCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InitialSceneCoordinator.swift; sourceTree = "<group>"; };
@@ -108,6 +112,7 @@
 			children = (
 				E1088D532031E49300889B04 /* Assets.xcassets */,
 				E1088D712031F75600889B04 /* transactions.json */,
+				8FA2B375292001160010BD9B /* Localizable.strings */,
 			);
 			path = Resources;
 			sourceTree = "<group>";
@@ -156,6 +161,7 @@
 			isa = PBXGroup;
 			children = (
 				8FF0E9C9291F7B1700DA2D3D /* NSDecimalNumberExtensions.swift */,
+				8FA2B376292001760010BD9B /* String+localized.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -294,6 +300,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				E1088D572031E49300889B04 /* LaunchScreen.storyboard in Resources */,
+				8FA2B373292001160010BD9B /* Localizable.strings in Resources */,
 				E1088D542031E49300889B04 /* Assets.xcassets in Resources */,
 				E1088D722031F75600889B04 /* transactions.json in Resources */,
 			);
@@ -324,6 +331,7 @@
 				8FA2B36E291FF84B0010BD9B /* ViewModelingState.swift in Sources */,
 				8FA2B370291FFD430010BD9B /* TransactionsCoordinator.swift in Sources */,
 				8FF0E9CE291F7D7000DA2D3D /* InitialSceneCoordinator.swift in Sources */,
+				8FA2B377292001760010BD9B /* String+localized.swift in Sources */,
 				8F125E49291FE381005DF57E /* TransactionsViewModel.swift in Sources */,
 				8FF0E9CA291F7B1700DA2D3D /* NSDecimalNumberExtensions.swift in Sources */,
 				8FF0E9D9291FDDE100DA2D3D /* OnboardingCoordinator.swift in Sources */,
@@ -351,6 +359,14 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
+		8FA2B375292001160010BD9B /* Localizable.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				8FA2B374292001160010BD9B /* en */,
+			);
+			name = Localizable.strings;
+			sourceTree = "<group>";
+		};
 		E1088D552031E49300889B04 /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (

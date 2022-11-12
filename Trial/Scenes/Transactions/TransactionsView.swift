@@ -29,32 +29,41 @@ struct TransactionsView: View, OnEventProtocol {
                 if #available(iOS 14.0, *) {
                     ProgressView()
                 } else {
-                    #warning("TODO")
-                    EmptyView()
+                    Text("loading".localized)
                 }
+
             case .ready(let items):
-                List(items) { item in
+                ScrollView {
                     HStack {
-                        VStack(alignment: .leading) {
-                            Text(item.title)
-                                .foregroundColor(Color.primary)
+                        Text("transactions.count".localized)
+                            .foregroundColor(Color.primary)
+                            .bold()
 
-                            if let subtitle = item.subtitle {
-                                Text(subtitle)
-                                    .foregroundColor(Color.secondary)
+                        Text("\(items.count)")
+                            .foregroundColor(Color.primary)
+                            .bold()
+                            .italic()
+
+                        Spacer()
+                    }
+                    .padding(.bottom, 12)
+
+                    if #available(iOS 14.0, *) {
+                        LazyVStack(alignment: .leading) {
+                            ForEach(items) { item in
+                                transactionItem(item)
                             }
-
-                            if !item.additionalTexts.isEmpty {
-                                Spacer(minLength: 24)
-
-                                ForEach(item.additionalTexts, id: \.self) { line in
-                                    Text(line)
-                                        .foregroundColor(Color.secondary)
-                                }
+                        }
+                    } else {
+                        VStack(alignment: .leading) {
+                            ForEach(items) { item in
+                                transactionItem(item)
                             }
                         }
                     }
                 }
+                .padding(.horizontal, 24)
+
             case .failed(let error):
                 VStack(spacing: 24) {
                     Text(error.localizedDescription)
@@ -62,15 +71,56 @@ struct TransactionsView: View, OnEventProtocol {
                     Button(action: {
                         viewModel.loadData()
                     }, label: {
-                        Text("Retry")
+                        Text("retry".localized)
                     })
                 }
+
             case .none:
                 EmptyView()
             }
         }
         .onAppear {
             viewModel.loadData()
+        }
+    }
+
+    @ViewBuilder
+    private func transactionItem(_ model: TransactionItem) -> some View {
+        HStack {
+            VStack(alignment: .leading) {
+                HStack {
+                    Text(model.title)
+                        .font(.body)
+                        .foregroundColor(Color.primary)
+
+                    Spacer()
+                    
+                    Text(model.amountFormatted)
+                        .font(.body)
+                        .bold()
+                        .foregroundColor(Color.primary)
+                }
+
+                if let subtitle = model.subtitle {
+                    Text(subtitle)
+                        .font(.caption)
+                        .foregroundColor(Color.secondary)
+                }
+
+                if !model.additionalTexts.isEmpty {
+                    Spacer()
+                        .frame(height: 12)
+
+                    ForEach(model.additionalTexts, id: \.self) { line in
+                        Text(line)
+                            .font(.caption)
+                            .foregroundColor(Color.secondary.opacity(0.8))
+                    }
+                }
+
+                Divider()
+                    .padding(.vertical, 12)
+            }
         }
     }
 }

@@ -25,11 +25,16 @@ final class InitialSceneCoordinator: InitialSceneCoordinating {
     }
 
     func start() {
+        setupNavigationController()
         setupInitialScene()
     }
 }
 
 private extension InitialSceneCoordinator {
+    func setupNavigationController() {
+        navigationController.navigationBar.prefersLargeTitles = true
+    }
+
     func setupInitialScene() {
         let transactionsCoordinator = TransactionsCoordinator(parent: self, navigationController: navigationController)
         transactionsCoordinator.start()
