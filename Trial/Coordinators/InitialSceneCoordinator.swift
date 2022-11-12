@@ -31,9 +31,8 @@ final class InitialSceneCoordinator: InitialSceneCoordinating {
 
 private extension InitialSceneCoordinator {
     func setupInitialScene() {
-        let vc = UIViewController()
-        vc.view.backgroundColor = .green
-        navigationController.pushViewController(vc, animated: false)
+        let transactionsCoordinator = TransactionsCoordinator(parent: self, navigationController: navigationController)
+        transactionsCoordinator.start()
 
         window.rootViewController = navigationController
         window.makeKeyAndVisible()
