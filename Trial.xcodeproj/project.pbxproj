@@ -7,6 +7,14 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		8FF0E9CA291F7B1700DA2D3D /* NSDecimalNumberExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8FF0E9C9291F7B1700DA2D3D /* NSDecimalNumberExtensions.swift */; };
+		8FF0E9CC291F7C2500DA2D3D /* Coordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8FF0E9CB291F7C2500DA2D3D /* Coordinator.swift */; };
+		8FF0E9CE291F7D7000DA2D3D /* InitialSceneCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8FF0E9CD291F7D7000DA2D3D /* InitialSceneCoordinator.swift */; };
+		8FF0E9D0291FD71800DA2D3D /* UserDefaultWrapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8FF0E9CF291FD71800DA2D3D /* UserDefaultWrapper.swift */; };
+		8FF0E9D2291FD74200DA2D3D /* UserDefaultsProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8FF0E9D1291FD74200DA2D3D /* UserDefaultsProvider.swift */; };
+		8FF0E9D5291FD9D300DA2D3D /* OnboardingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8FF0E9D4291FD9D300DA2D3D /* OnboardingView.swift */; };
+		8FF0E9D7291FDA4100DA2D3D /* OnEventPorotocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8FF0E9D6291FDA4100DA2D3D /* OnEventPorotocol.swift */; };
+		8FF0E9D9291FDDE100DA2D3D /* OnboardingCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8FF0E9D8291FDDE100DA2D3D /* OnboardingCoordinator.swift */; };
 		E1070CA8203B219B009EECE4 /* Models.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1070CA7203B219B009EECE4 /* Models.swift */; };
 		E1088D4D2031E49300889B04 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1088D4C2031E49300889B04 /* AppDelegate.swift */; };
 		E1088D542031E49300889B04 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E1088D532031E49300889B04 /* Assets.xcassets */; };
@@ -28,6 +36,14 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		8FF0E9C9291F7B1700DA2D3D /* NSDecimalNumberExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NSDecimalNumberExtensions.swift; sourceTree = "<group>"; };
+		8FF0E9CB291F7C2500DA2D3D /* Coordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Coordinator.swift; sourceTree = "<group>"; };
+		8FF0E9CD291F7D7000DA2D3D /* InitialSceneCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InitialSceneCoordinator.swift; sourceTree = "<group>"; };
+		8FF0E9CF291FD71800DA2D3D /* UserDefaultWrapper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDefaultWrapper.swift; sourceTree = "<group>"; };
+		8FF0E9D1291FD74200DA2D3D /* UserDefaultsProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDefaultsProvider.swift; sourceTree = "<group>"; };
+		8FF0E9D4291FD9D300DA2D3D /* OnboardingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingView.swift; sourceTree = "<group>"; };
+		8FF0E9D6291FDA4100DA2D3D /* OnEventPorotocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnEventPorotocol.swift; sourceTree = "<group>"; };
+		8FF0E9D8291FDDE100DA2D3D /* OnboardingCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingCoordinator.swift; sourceTree = "<group>"; };
 		E1070CA7203B219B009EECE4 /* Models.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Models.swift; sourceTree = "<group>"; };
 		E1088D492031E49300889B04 /* Trial.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Trial.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E1088D4C2031E49300889B04 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -59,6 +75,79 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		8FF0E9C2291F790700DA2D3D /* Application */ = {
+			isa = PBXGroup;
+			children = (
+				8FF0E9C3291F796400DA2D3D /* Resources */,
+				E1088D4C2031E49300889B04 /* AppDelegate.swift */,
+				E1088D552031E49300889B04 /* LaunchScreen.storyboard */,
+				E1088D582031E49300889B04 /* Info.plist */,
+			);
+			path = Application;
+			sourceTree = "<group>";
+		};
+		8FF0E9C3291F796400DA2D3D /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				E1088D532031E49300889B04 /* Assets.xcassets */,
+				E1088D712031F75600889B04 /* transactions.json */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		8FF0E9C4291F7AAE00DA2D3D /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				E1088D6E2031E67A00889B04 /* TransactionsAPI.swift */,
+			);
+			path = Services;
+			sourceTree = "<group>";
+		};
+		8FF0E9C5291F7AB700DA2D3D /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				E1070CA7203B219B009EECE4 /* Models.swift */,
+				8FF0E9CF291FD71800DA2D3D /* UserDefaultWrapper.swift */,
+				8FF0E9D1291FD74200DA2D3D /* UserDefaultsProvider.swift */,
+				8FF0E9D6291FDA4100DA2D3D /* OnEventPorotocol.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		8FF0E9C6291F7ABD00DA2D3D /* Scenes */ = {
+			isa = PBXGroup;
+			children = (
+				8FF0E9D3291FD9C600DA2D3D /* Onboarding */,
+			);
+			path = Scenes;
+			sourceTree = "<group>";
+		};
+		8FF0E9C7291F7ADF00DA2D3D /* Coordinators */ = {
+			isa = PBXGroup;
+			children = (
+				8FF0E9CB291F7C2500DA2D3D /* Coordinator.swift */,
+				8FF0E9CD291F7D7000DA2D3D /* InitialSceneCoordinator.swift */,
+				8FF0E9D8291FDDE100DA2D3D /* OnboardingCoordinator.swift */,
+			);
+			path = Coordinators;
+			sourceTree = "<group>";
+		};
+		8FF0E9C8291F7AFC00DA2D3D /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				8FF0E9C9291F7B1700DA2D3D /* NSDecimalNumberExtensions.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		8FF0E9D3291FD9C600DA2D3D /* Onboarding */ = {
+			isa = PBXGroup;
+			children = (
+				8FF0E9D4291FD9D300DA2D3D /* OnboardingView.swift */,
+			);
+			path = Onboarding;
+			sourceTree = "<group>";
+		};
 		E1088D402031E49300889B04 = {
 			isa = PBXGroup;
 			children = (
@@ -80,13 +169,12 @@
 		E1088D4B2031E49300889B04 /* Trial */ = {
 			isa = PBXGroup;
 			children = (
-				E1088D712031F75600889B04 /* transactions.json */,
-				E1088D4C2031E49300889B04 /* AppDelegate.swift */,
-				E1088D532031E49300889B04 /* Assets.xcassets */,
-				E1088D552031E49300889B04 /* LaunchScreen.storyboard */,
-				E1088D582031E49300889B04 /* Info.plist */,
-				E1088D6E2031E67A00889B04 /* TransactionsAPI.swift */,
-				E1070CA7203B219B009EECE4 /* Models.swift */,
+				8FF0E9C2291F790700DA2D3D /* Application */,
+				8FF0E9C7291F7ADF00DA2D3D /* Coordinators */,
+				8FF0E9C8291F7AFC00DA2D3D /* Extensions */,
+				8FF0E9C5291F7AB700DA2D3D /* Models */,
+				8FF0E9C6291F7ABD00DA2D3D /* Scenes */,
+				8FF0E9C4291F7AAE00DA2D3D /* Services */,
 			);
 			path = Trial;
 			sourceTree = "<group>";
@@ -208,7 +296,15 @@
 			files = (
 				E1088D4D2031E49300889B04 /* AppDelegate.swift in Sources */,
 				E1088D6F2031E67A00889B04 /* TransactionsAPI.swift in Sources */,
+				8FF0E9CC291F7C2500DA2D3D /* Coordinator.swift in Sources */,
+				8FF0E9D5291FD9D300DA2D3D /* OnboardingView.swift in Sources */,
+				8FF0E9D0291FD71800DA2D3D /* UserDefaultWrapper.swift in Sources */,
 				E1070CA8203B219B009EECE4 /* Models.swift in Sources */,
+				8FF0E9CE291F7D7000DA2D3D /* InitialSceneCoordinator.swift in Sources */,
+				8FF0E9CA291F7B1700DA2D3D /* NSDecimalNumberExtensions.swift in Sources */,
+				8FF0E9D9291FDDE100DA2D3D /* OnboardingCoordinator.swift in Sources */,
+				8FF0E9D2291FD74200DA2D3D /* UserDefaultsProvider.swift in Sources */,
+				8FF0E9D7291FDA4100DA2D3D /* OnEventPorotocol.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -361,7 +457,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = LRA2GZ8MU6;
-				INFOPLIST_FILE = Trial/Info.plist;
+				INFOPLIST_FILE = Trial/Application/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 13.5;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = at.beeone.Trial;
@@ -377,7 +473,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = LRA2GZ8MU6;
-				INFOPLIST_FILE = Trial/Info.plist;
+				INFOPLIST_FILE = Trial/Application/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 13.5;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = at.beeone.Trial;

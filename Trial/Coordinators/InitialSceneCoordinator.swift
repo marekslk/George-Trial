@@ -1,0 +1,50 @@
+//
+//  InitialSceneCoordinator.swift
+//  Trial
+//
+//  Created by Marek Slávik on 12.11.2022.
+//  Copyright © 2022 BeeOne Gmbh. All rights reserved.
+//
+
+import UIKit
+
+// MARK: InitialSceneCoordinating
+protocol InitialSceneCoordinating: Coordinator {
+    init(window: UIWindow)
+}
+
+// MARK: InitialSceneCoordinator
+final class InitialSceneCoordinator: InitialSceneCoordinating {
+    private let window: UIWindow
+
+    var childCoordinators = [Coordinator]()
+    var navigationController = UINavigationController()
+
+    init(window: UIWindow) {
+        self.window = window
+    }
+
+    func start() {
+        setupInitialScene()
+    }
+}
+
+private extension InitialSceneCoordinator {
+    func setupInitialScene() {
+        let vc = UIViewController()
+        vc.view.backgroundColor = .green
+        navigationController.pushViewController(vc, animated: false)
+
+        window.rootViewController = navigationController
+        window.makeKeyAndVisible()
+
+        // Check if user was onboarded already. If not, show onboarding.
+        if UserDefaultsProvider.userWasOnboarded == false {
+            let onboardingCoordinator = OnboardingCoordinator(parent: self)
+            onboardingCoordinator.start()
+
+            childCoordinators.append(onboardingCoordinator)
+            navigationController.present(onboardingCoordinator.navigationController, animated: false)
+        }
+    }
+}
