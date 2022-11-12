@@ -11,6 +11,7 @@ import SwiftUI
 
 // MARK: TransactionsCoordinatoring
 protocol TransactionsCoordinating: Coordinator {
+    func showTransactionDetail(transactionItem: TransactionItem)
 }
 
 // MARK: TransactionsCoordinator
@@ -31,6 +32,8 @@ final class TransactionsCoordinator: TransactionsCoordinating {
             viewModel: TransactionsViewModel(),
             onEvent: { event in
                 switch event {
+                case .detail(let transactionItem):
+                    self.showTransactionDetail(transactionItem: transactionItem)
                 }
             }
         )
@@ -38,6 +41,22 @@ final class TransactionsCoordinator: TransactionsCoordinating {
         viewController.navigationItem.largeTitleDisplayMode = .always
         // We need to set title for VC here instead of SwiftUI 
         viewController.title = "transactions.title".localized
+
         navigationController.setViewControllers([viewController], animated: false)
+    }
+
+    func showTransactionDetail(transactionItem: TransactionItem) {
+        let transactionDetailView = TransactionDetailView(
+            viewModel: TransactionDetailViewModel(transactionItem: transactionItem),
+            onEvent: { event in
+                switch event {
+                }
+            }
+        )
+        let viewController = UIHostingController(rootView: transactionDetailView)
+        // We need to set title for VC here instead of SwiftUI
+        viewController.title = "transaction.detail.title".localized
+
+        navigationController.pushViewController(viewController, animated: true)
     }
 }

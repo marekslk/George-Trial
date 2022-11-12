@@ -10,18 +10,11 @@ import Foundation
 import Combine
 import SwiftUI
 
-struct TransactionItem: Identifiable {
-    let id: String
-    let title: String
-    let subtitle: String?
-    let additionalTexts: [String]
-    let amountFormatted: String
-}
-
 final class TransactionsViewModel: ObservableObject {
+    #warning("TODO")
     private let transactionsApi = TransactionsAPI()
 
-    @Published private(set) var state: ViewModelingState<[TransactionItem]>?
+    @Published private(set) var state: ViewModelingState<TransactionsView.Model>?
 
     private var latestTransactions = [Transaction]()
     private var cancellables = Set<AnyCancellable>()
@@ -44,7 +37,19 @@ final class TransactionsViewModel: ObservableObject {
 
                     self.latestTransactions = transactions
                     let transactionItems = self.transactionItems(from: transactions)
-                    self.state = .ready(value: transactionItems)
+                    let transactionsSum = transactions.map { $0.amount.decimalValue.integerValueWithPrecision2 }.reduce(0, +)
+                    let transactionsSumReadable = Double(transactionsSum) / 100
+                    var transactionsSumFormatted = "\(transactionsSumReadable) \(transactions.first?.amount.currency ?? "EUR")"
+                    if transactionsSumReadable > 0 {
+                        transactionsSumFormatted = "+\(transactionsSumFormatted)"
+                    }
+
+                    let model = TransactionsView.Model(
+                        transactionsCount: transactions.count,
+                        transactionsSumFormatted: transactionsSumFormatted,
+                        items: transactionItems
+                    )
+                    self.state = .ready(value: model)
                 }
             )
             .store(in: &cancellables)

@@ -11,8 +11,14 @@ import SwiftUI
 struct TransactionsView: View, OnEventProtocol {
     @ObservedObject var viewModel: TransactionsViewModel
 
-    enum Event {
+    struct Model {
+        let transactionsCount: Int
+        let transactionsSumFormatted: String
+        let items: [TransactionItem]
+    }
 
+    enum Event {
+        case detail(TransactionItem)
     }
 
     var onEvent: (Event) -> Void
@@ -22,8 +28,9 @@ struct TransactionsView: View, OnEventProtocol {
         self.onEvent = onEvent
     }
 
+    // MARK: body
     var body: some View {
-        ZStack {
+        VStack {
             switch viewModel.state {
             case .loading:
                 if #available(iOS 14.0, *) {
@@ -32,37 +39,49 @@ struct TransactionsView: View, OnEventProtocol {
                     Text("loading".localized)
                 }
 
-            case .ready(let items):
+            case .ready(let model):
                 ScrollView {
-                    HStack {
-                        Text("transactions.count".localized)
-                            .foregroundColor(Color.primary)
-                            .bold()
+                    Group {
+                        VStack {
+                            HStack {
+                                Text("\("transactions.balance".localized) \(model.transactionsSumFormatted)")
+                                    .foregroundColor(Color.primary)
+                                    .bold()
 
-                        Text("\(items.count)")
-                            .foregroundColor(Color.primary)
-                            .bold()
-                            .italic()
+                                Spacer()
+                            }
 
-                        Spacer()
-                    }
-                    .padding(.bottom, 12)
+                            HStack {
+                                Text("transactions.count".localized)
+                                    .foregroundColor(Color.primary)
+                                    .bold()
 
-                    if #available(iOS 14.0, *) {
-                        LazyVStack(alignment: .leading) {
-                            ForEach(items) { item in
-                                transactionItem(item)
+                                Text("\(model.transactionsCount)")
+                                    .foregroundColor(Color.primary)
+                                    .bold()
+
+                                Spacer()
+                            }
+                            .padding(.top, 6)
+                            .padding(.bottom, 12)
+                        }
+
+                        if #available(iOS 14.0, *) {
+                            LazyVStack(alignment: .leading) {
+                                ForEach(model.items) { item in
+                                    transactionItem(item)
+                                }
+                            }
+                        } else {
+                            VStack(alignment: .leading) {
+                                ForEach(model.items) { item in
+                                    transactionItem(item)
+                                }
                             }
                         }
-                    } else {
-                        VStack(alignment: .leading) {
-                            ForEach(items) { item in
-                                transactionItem(item)
-                            }
-                        }
                     }
+                    .padding(.horizontal, 24)
                 }
-                .padding(.horizontal, 24)
 
             case .failed(let error):
                 VStack(spacing: 24) {
@@ -84,6 +103,7 @@ struct TransactionsView: View, OnEventProtocol {
         }
     }
 
+    // MARK: transactionItem
     @ViewBuilder
     private func transactionItem(_ model: TransactionItem) -> some View {
         HStack {
@@ -119,8 +139,12 @@ struct TransactionsView: View, OnEventProtocol {
                 }
 
                 Divider()
-                    .padding(.vertical, 12)
+                    .padding(.top, 12)
             }
+        }
+        .contentShape(Rectangle())
+        .onTapGesture {
+            onEvent(.detail(model))
         }
     }
 }
