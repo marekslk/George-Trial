@@ -10,18 +10,18 @@ public final class TransactionsAPI {
     /// Loads a list of transaction - you can assume that all transactions have the same currency
     public func loadTransactions() -> Future<[Transaction], APIError> {
         Future { promise in
-//            DispatchQueue.main.asyncAfter(deadline: .now() + (Double(arc4random_uniform(5000)) / 1000.0)) { [weak self] in
-//                guard let self else {
-//                    return
-//                }
-//
-//                switch arc4random_uniform(100) {
-//                case 0..<25:
-//                    promise(.failure(.randomError))
-//                default:
+            DispatchQueue.main.asyncAfter(deadline: .now() + (Double(arc4random_uniform(5000)) / 1000.0)) { [weak self] in
+                guard let self else {
+                    return
+                }
+
+                switch arc4random_uniform(100) {
+                case 0..<25:
+                    promise(.failure(.randomError))
+                default:
                     promise(.success(self.readTransactions()))
-//                }
-//            }
+                }
+            }
         }
     }
     

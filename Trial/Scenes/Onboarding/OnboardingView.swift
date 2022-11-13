@@ -17,7 +17,7 @@ struct OnboardingView: View, OnEventProtocol {
 
     var body: some View {
         VStack {
-            Text("Hey")
+            Text("👋")
         }
         .navigationBarItems(trailing: closeButton)
     }
