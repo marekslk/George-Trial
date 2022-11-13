@@ -8,7 +8,7 @@
 
 import Foundation
 
-struct TransactionItem: Identifiable {
+struct TransactionRowItem: Identifiable {
     let id: String
     let title: String
     let subtitle: String?

@@ -12,8 +12,7 @@ import SwiftUI
 
 // MARK: TransactionsViewModel
 final class TransactionsViewModel: ObservableObject {
-#warning("TODO")
-    private let transactionsApi = TransactionsAPI()
+    @Locatable private var transactionsService: TransactionsServicing
 
     @Published private(set) var state: ViewModelingState<TransactionsView.Data>?
 
@@ -22,7 +21,7 @@ final class TransactionsViewModel: ObservableObject {
     func loadData() {
         state = .loading
         
-        transactionsApi.loadTransactions()
+        transactionsService.transactions()
             .sink(
                 receiveCompletion: { [weak self] completion in
                     switch completion {
@@ -46,7 +45,7 @@ final class TransactionsViewModel: ObservableObject {
 // MARK: Private
 private extension TransactionsViewModel {
     func transactionsViewData(from transactions: [Transaction]) -> TransactionsView.Data {
-        let transactionItems = transactionItems(from: transactions)
+        let transactionRowItems = transactionRowItems(from: transactions)
 
         let transactionsSum = transactions
             .map { $0.amount.decimalValue.integerValueWithPrecision2 }
@@ -61,11 +60,11 @@ private extension TransactionsViewModel {
         return TransactionsView.Data(
             transactionsCount: transactions.count,
             balanceFormatted: balanceFormatted,
-            items: transactionItems
+            items: transactionRowItems
         )
     }
 
-    func transactionItems(from transactions: [Transaction]) -> [TransactionItem] {
+    func transactionRowItems(from transactions: [Transaction]) -> [TransactionRowItem] {
         transactions.map { transaction in
             let amountHumanReadable = Double(transaction.amount.decimalValue.integerValueWithPrecision2) / 100
             let currency = transaction.amount.currency
@@ -75,7 +74,7 @@ private extension TransactionsViewModel {
                 amountFormatted = "+\(amountFormatted)"
             }
 
-            return TransactionItem(
+            return TransactionRowItem(
                 id: transaction.id,
                 title: transaction.title,
                 subtitle: transaction.subtitle,

@@ -11,7 +11,7 @@ import SwiftUI
 
 // MARK: TransactionsCoordinatoring
 protocol TransactionsCoordinating: Coordinator {
-    func showTransactionDetail(transactionItem: TransactionItem)
+    func showTransactionDetail(transactionRowItem: TransactionRowItem)
 }
 
 // MARK: TransactionsCoordinator
@@ -32,8 +32,8 @@ final class TransactionsCoordinator: TransactionsCoordinating {
             viewModel: TransactionsViewModel(),
             onEvent: { event in
                 switch event {
-                case .detail(let transactionItem):
-                    self.showTransactionDetail(transactionItem: transactionItem)
+                case .detail(let transactionRowItem):
+                    self.showTransactionDetail(transactionRowItem: transactionRowItem)
                 }
             }
         )
@@ -45,9 +45,9 @@ final class TransactionsCoordinator: TransactionsCoordinating {
         navigationController.setViewControllers([viewController], animated: false)
     }
 
-    func showTransactionDetail(transactionItem: TransactionItem) {
+    func showTransactionDetail(transactionRowItem: TransactionRowItem) {
         let transactionDetailView = TransactionDetailView(
-            viewModel: TransactionDetailViewModel(transactionItem: transactionItem),
+            viewModel: TransactionDetailViewModel(transactionRowItem: transactionRowItem),
             onEvent: { event in
                 switch event {
                 }

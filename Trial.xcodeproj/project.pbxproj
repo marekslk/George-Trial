@@ -12,6 +12,14 @@
 		8F4A4C992920301A00D26A11 /* TransactionItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F4A4C982920301A00D26A11 /* TransactionItem.swift */; };
 		8F4A4C9C292030E200D26A11 /* TransactionDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F4A4C9B292030E200D26A11 /* TransactionDetailView.swift */; };
 		8F4A4C9E2920312000D26A11 /* TransactionDetailViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F4A4C9D2920312000D26A11 /* TransactionDetailViewModel.swift */; };
+		8F4A4CA12920E32A00D26A11 /* TransactionsService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F4A4CA02920E32A00D26A11 /* TransactionsService.swift */; };
+		8F4A4CA52920E4B000D26A11 /* Locator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F4A4CA42920E4B000D26A11 /* Locator.swift */; };
+		8F4A4CA72920E81900D26A11 /* DependencyInjection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F4A4CA62920E81900D26A11 /* DependencyInjection.swift */; };
+		8F4A4CA92920E9E200D26A11 /* APIError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F4A4CA82920E9E200D26A11 /* APIError.swift */; };
+		8F4A4CAC2920EA0300D26A11 /* Transaction.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F4A4CAB2920EA0300D26A11 /* Transaction.swift */; };
+		8F4A4CAE2920EAD000D26A11 /* AccountNumber.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F4A4CAD2920EAD000D26A11 /* AccountNumber.swift */; };
+		8F4A4CB02920EAFD00D26A11 /* AdditionalTexts.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F4A4CAF2920EAFD00D26A11 /* AdditionalTexts.swift */; };
+		8F4A4CB22920EB0F00D26A11 /* Amount.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F4A4CB12920EB0F00D26A11 /* Amount.swift */; };
 		8FA2B36E291FF84B0010BD9B /* ViewModelingState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8FA2B36D291FF84B0010BD9B /* ViewModelingState.swift */; };
 		8FA2B370291FFD430010BD9B /* TransactionsCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8FA2B36F291FFD430010BD9B /* TransactionsCoordinator.swift */; };
 		8FA2B373292001160010BD9B /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 8FA2B375292001160010BD9B /* Localizable.strings */; };
@@ -24,7 +32,7 @@
 		8FF0E9D5291FD9D300DA2D3D /* OnboardingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8FF0E9D4291FD9D300DA2D3D /* OnboardingView.swift */; };
 		8FF0E9D7291FDA4100DA2D3D /* OnEventPorotocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8FF0E9D6291FDA4100DA2D3D /* OnEventPorotocol.swift */; };
 		8FF0E9D9291FDDE100DA2D3D /* OnboardingCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8FF0E9D8291FDDE100DA2D3D /* OnboardingCoordinator.swift */; };
-		E1070CA8203B219B009EECE4 /* Models.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1070CA7203B219B009EECE4 /* Models.swift */; };
+		E1070CA8203B219B009EECE4 /* TransactionResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1070CA7203B219B009EECE4 /* TransactionResponse.swift */; };
 		E1088D4D2031E49300889B04 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1088D4C2031E49300889B04 /* AppDelegate.swift */; };
 		E1088D542031E49300889B04 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E1088D532031E49300889B04 /* Assets.xcassets */; };
 		E1088D572031E49300889B04 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E1088D552031E49300889B04 /* LaunchScreen.storyboard */; };
@@ -50,6 +58,14 @@
 		8F4A4C982920301A00D26A11 /* TransactionItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransactionItem.swift; sourceTree = "<group>"; };
 		8F4A4C9B292030E200D26A11 /* TransactionDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransactionDetailView.swift; sourceTree = "<group>"; };
 		8F4A4C9D2920312000D26A11 /* TransactionDetailViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransactionDetailViewModel.swift; sourceTree = "<group>"; };
+		8F4A4CA02920E32A00D26A11 /* TransactionsService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransactionsService.swift; sourceTree = "<group>"; };
+		8F4A4CA42920E4B000D26A11 /* Locator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Locator.swift; sourceTree = "<group>"; };
+		8F4A4CA62920E81900D26A11 /* DependencyInjection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DependencyInjection.swift; sourceTree = "<group>"; };
+		8F4A4CA82920E9E200D26A11 /* APIError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIError.swift; sourceTree = "<group>"; };
+		8F4A4CAB2920EA0300D26A11 /* Transaction.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Transaction.swift; sourceTree = "<group>"; };
+		8F4A4CAD2920EAD000D26A11 /* AccountNumber.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountNumber.swift; sourceTree = "<group>"; };
+		8F4A4CAF2920EAFD00D26A11 /* AdditionalTexts.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AdditionalTexts.swift; sourceTree = "<group>"; };
+		8F4A4CB12920EB0F00D26A11 /* Amount.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Amount.swift; sourceTree = "<group>"; };
 		8FA2B36D291FF84B0010BD9B /* ViewModelingState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewModelingState.swift; sourceTree = "<group>"; };
 		8FA2B36F291FFD430010BD9B /* TransactionsCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransactionsCoordinator.swift; sourceTree = "<group>"; };
 		8FA2B374292001160010BD9B /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
@@ -62,7 +78,7 @@
 		8FF0E9D4291FD9D300DA2D3D /* OnboardingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingView.swift; sourceTree = "<group>"; };
 		8FF0E9D6291FDA4100DA2D3D /* OnEventPorotocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnEventPorotocol.swift; sourceTree = "<group>"; };
 		8FF0E9D8291FDDE100DA2D3D /* OnboardingCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingCoordinator.swift; sourceTree = "<group>"; };
-		E1070CA7203B219B009EECE4 /* Models.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Models.swift; sourceTree = "<group>"; };
+		E1070CA7203B219B009EECE4 /* TransactionResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransactionResponse.swift; sourceTree = "<group>"; };
 		E1088D492031E49300889B04 /* Trial.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Trial.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E1088D4C2031E49300889B04 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		E1088D532031E49300889B04 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -111,6 +127,48 @@
 			path = TransactionDetail;
 			sourceTree = "<group>";
 		};
+		8F4A4C9F2920E31900D26A11 /* API */ = {
+			isa = PBXGroup;
+			children = (
+				E1088D6E2031E67A00889B04 /* TransactionsAPI.swift */,
+			);
+			path = API;
+			sourceTree = "<group>";
+		};
+		8F4A4CA22920E49500D26A11 /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				8FA2B36D291FF84B0010BD9B /* ViewModelingState.swift */,
+				8FF0E9D6291FDA4100DA2D3D /* OnEventPorotocol.swift */,
+				8FF0E9D1291FD74200DA2D3D /* UserDefaultsProvider.swift */,
+				8FF0E9CF291FD71800DA2D3D /* UserDefaultWrapper.swift */,
+				8F4A4CA62920E81900D26A11 /* DependencyInjection.swift */,
+				8F4A4CA32920E4A300D26A11 /* DependencyInjection */,
+			);
+			path = Utils;
+			sourceTree = "<group>";
+		};
+		8F4A4CA32920E4A300D26A11 /* DependencyInjection */ = {
+			isa = PBXGroup;
+			children = (
+				8F4A4CA42920E4B000D26A11 /* Locator.swift */,
+			);
+			path = DependencyInjection;
+			sourceTree = "<group>";
+		};
+		8F4A4CAA2920E9F100D26A11 /* TransactionRelated */ = {
+			isa = PBXGroup;
+			children = (
+				E1070CA7203B219B009EECE4 /* TransactionResponse.swift */,
+				8F4A4C982920301A00D26A11 /* TransactionItem.swift */,
+				8F4A4CAB2920EA0300D26A11 /* Transaction.swift */,
+				8F4A4CAD2920EAD000D26A11 /* AccountNumber.swift */,
+				8F4A4CAF2920EAFD00D26A11 /* AdditionalTexts.swift */,
+				8F4A4CB12920EB0F00D26A11 /* Amount.swift */,
+			);
+			path = TransactionRelated;
+			sourceTree = "<group>";
+		};
 		8FF0E9C2291F790700DA2D3D /* Application */ = {
 			isa = PBXGroup;
 			children = (
@@ -135,7 +193,8 @@
 		8FF0E9C4291F7AAE00DA2D3D /* Services */ = {
 			isa = PBXGroup;
 			children = (
-				E1088D6E2031E67A00889B04 /* TransactionsAPI.swift */,
+				8F4A4C9F2920E31900D26A11 /* API */,
+				8F4A4CA02920E32A00D26A11 /* TransactionsService.swift */,
 			);
 			path = Services;
 			sourceTree = "<group>";
@@ -143,12 +202,8 @@
 		8FF0E9C5291F7AB700DA2D3D /* Models */ = {
 			isa = PBXGroup;
 			children = (
-				E1070CA7203B219B009EECE4 /* Models.swift */,
-				8FF0E9CF291FD71800DA2D3D /* UserDefaultWrapper.swift */,
-				8FF0E9D1291FD74200DA2D3D /* UserDefaultsProvider.swift */,
-				8FF0E9D6291FDA4100DA2D3D /* OnEventPorotocol.swift */,
-				8FA2B36D291FF84B0010BD9B /* ViewModelingState.swift */,
-				8F4A4C982920301A00D26A11 /* TransactionItem.swift */,
+				8F4A4CAA2920E9F100D26A11 /* TransactionRelated */,
+				8F4A4CA82920E9E200D26A11 /* APIError.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -218,6 +273,7 @@
 				8FF0E9C5291F7AB700DA2D3D /* Models */,
 				8FF0E9C6291F7ABD00DA2D3D /* Scenes */,
 				8FF0E9C4291F7AAE00DA2D3D /* Services */,
+				8F4A4CA22920E49500D26A11 /* Utils */,
 			);
 			path = Trial;
 			sourceTree = "<group>";
@@ -340,23 +396,31 @@
 			files = (
 				E1088D4D2031E49300889B04 /* AppDelegate.swift in Sources */,
 				E1088D6F2031E67A00889B04 /* TransactionsAPI.swift in Sources */,
+				8F4A4CAC2920EA0300D26A11 /* Transaction.swift in Sources */,
 				8FF0E9CC291F7C2500DA2D3D /* Coordinator.swift in Sources */,
 				8FF0E9D5291FD9D300DA2D3D /* OnboardingView.swift in Sources */,
 				8FF0E9D0291FD71800DA2D3D /* UserDefaultWrapper.swift in Sources */,
 				8F125E47291FE376005DF57E /* TransactionsView.swift in Sources */,
-				E1070CA8203B219B009EECE4 /* Models.swift in Sources */,
+				E1070CA8203B219B009EECE4 /* TransactionResponse.swift in Sources */,
 				8F4A4C992920301A00D26A11 /* TransactionItem.swift in Sources */,
 				8FA2B36E291FF84B0010BD9B /* ViewModelingState.swift in Sources */,
 				8FA2B370291FFD430010BD9B /* TransactionsCoordinator.swift in Sources */,
+				8F4A4CA72920E81900D26A11 /* DependencyInjection.swift in Sources */,
+				8F4A4CA92920E9E200D26A11 /* APIError.swift in Sources */,
 				8FF0E9CE291F7D7000DA2D3D /* InitialSceneCoordinator.swift in Sources */,
 				8F4A4C9C292030E200D26A11 /* TransactionDetailView.swift in Sources */,
 				8F4A4C9E2920312000D26A11 /* TransactionDetailViewModel.swift in Sources */,
 				8FA2B377292001760010BD9B /* String+localized.swift in Sources */,
+				8F4A4CA52920E4B000D26A11 /* Locator.swift in Sources */,
 				8F125E49291FE381005DF57E /* TransactionsViewModel.swift in Sources */,
 				8FF0E9CA291F7B1700DA2D3D /* NSDecimalNumberExtensions.swift in Sources */,
+				8F4A4CB22920EB0F00D26A11 /* Amount.swift in Sources */,
 				8FF0E9D9291FDDE100DA2D3D /* OnboardingCoordinator.swift in Sources */,
 				8FF0E9D2291FD74200DA2D3D /* UserDefaultsProvider.swift in Sources */,
+				8F4A4CA12920E32A00D26A11 /* TransactionsService.swift in Sources */,
+				8F4A4CB02920EAFD00D26A11 /* AdditionalTexts.swift in Sources */,
 				8FF0E9D7291FDA4100DA2D3D /* OnEventPorotocol.swift in Sources */,
+				8F4A4CAE2920EAD000D26A11 /* AccountNumber.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

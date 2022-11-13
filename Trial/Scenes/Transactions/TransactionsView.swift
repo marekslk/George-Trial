@@ -15,12 +15,12 @@ struct TransactionsView: View, OnEventProtocol {
     struct Data {
         let transactionsCount: Int
         let balanceFormatted: String
-        let items: [TransactionItem]
+        let items: [TransactionRowItem]
     }
 
     // MARK: Event
     enum Event {
-        case detail(TransactionItem)
+        case detail(TransactionRowItem)
     }
 
     var onEvent: (Event) -> Void
@@ -122,7 +122,7 @@ private extension TransactionsView {
 
     // MARK: transactionItem
     @ViewBuilder
-    private func transactionItem(_ model: TransactionItem) -> some View {
+    private func transactionItem(_ model: TransactionRowItem) -> some View {
         HStack {
             VStack(alignment: .leading) {
                 HStack {

@@ -11,17 +11,17 @@ import Combine
 import SwiftUI
 
 final class TransactionDetailViewModel: ObservableObject {
-    @Published private(set) var state: ViewModelingState<TransactionItem>?
+    @Published private(set) var state: ViewModelingState<TransactionRowItem>?
 
-    private let transactionItem: TransactionItem
+    private let transactionRowItem: TransactionRowItem
     
-    init(transactionItem: TransactionItem) {
-        self.transactionItem = transactionItem
+    init(transactionRowItem: TransactionRowItem) {
+        self.transactionRowItem = transactionRowItem
     }
 
     func loadData() {
         state = .loading
 
-        self.state = .ready(value: transactionItem)
+        self.state = .ready(value: transactionRowItem)
     }
 }

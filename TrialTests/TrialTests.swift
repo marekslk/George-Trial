@@ -7,15 +7,14 @@ import Combine
 @testable import Trial
 
 class TrialTests: XCTestCase {
+    @Locatable private var transactionsService: TransactionsServicing
 
     private var cancellables = Set<AnyCancellable>()
     
     func testTransactionParsing() {
-        let api = TransactionsAPI()
-
         let expectation = XCTestExpectation(description: "Load transactions")
         
-        api.loadTransactions()
+        transactionsService.transactions()
             .sink(
                 receiveCompletion: { completion in
                     switch completion {
