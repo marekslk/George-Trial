@@ -10,13 +10,13 @@ import Foundation
 import Combine
 import SwiftUI
 
+// MARK: TransactionsViewModel
 final class TransactionsViewModel: ObservableObject {
-    #warning("TODO")
+#warning("TODO")
     private let transactionsApi = TransactionsAPI()
 
-    @Published private(set) var state: ViewModelingState<TransactionsView.Model>?
+    @Published private(set) var state: ViewModelingState<TransactionsView.Data>?
 
-    private var latestTransactions = [Transaction]()
     private var cancellables = Set<AnyCancellable>()
 
     func loadData() {
@@ -35,27 +35,37 @@ final class TransactionsViewModel: ObservableObject {
                 receiveValue: { [weak self] transactions in
                     guard let self else { return }
 
-                    self.latestTransactions = transactions
-                    let transactionItems = self.transactionItems(from: transactions)
-                    let transactionsSum = transactions.map { $0.amount.decimalValue.integerValueWithPrecision2 }.reduce(0, +)
-                    let transactionsSumReadable = Double(transactionsSum) / 100
-                    var transactionsSumFormatted = "\(transactionsSumReadable) \(transactions.first?.amount.currency ?? "EUR")"
-                    if transactionsSumReadable > 0 {
-                        transactionsSumFormatted = "+\(transactionsSumFormatted)"
-                    }
-
-                    let model = TransactionsView.Model(
-                        transactionsCount: transactions.count,
-                        transactionsSumFormatted: transactionsSumFormatted,
-                        items: transactionItems
-                    )
-                    self.state = .ready(value: model)
+                    let data = self.transactionsViewData(from: transactions)
+                    self.state = .ready(value: data)
                 }
             )
             .store(in: &cancellables)
     }
+}
 
-    private func transactionItems(from transactions: [Transaction]) -> [TransactionItem] {
+// MARK: Private
+private extension TransactionsViewModel {
+    func transactionsViewData(from transactions: [Transaction]) -> TransactionsView.Data {
+        let transactionItems = transactionItems(from: transactions)
+
+        let transactionsSum = transactions
+            .map { $0.amount.decimalValue.integerValueWithPrecision2 }
+            .reduce(0, +)
+        let transactionsSumReadable = Double(transactionsSum) / 100
+        // It's safe to use EUR as default value
+        var balanceFormatted = "\(transactionsSumReadable) \(transactions.first?.amount.currency ?? "EUR")"
+        if transactionsSumReadable > 0 {
+            balanceFormatted = "+\(balanceFormatted)"
+        }
+
+        return TransactionsView.Data(
+            transactionsCount: transactions.count,
+            balanceFormatted: balanceFormatted,
+            items: transactionItems
+        )
+    }
+
+    func transactionItems(from transactions: [Transaction]) -> [TransactionItem] {
         transactions.map { transaction in
             let amountHumanReadable = Double(transaction.amount.decimalValue.integerValueWithPrecision2) / 100
             let currency = transaction.amount.currency

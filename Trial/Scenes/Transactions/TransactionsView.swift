@@ -11,12 +11,14 @@ import SwiftUI
 struct TransactionsView: View, OnEventProtocol {
     @ObservedObject var viewModel: TransactionsViewModel
 
-    struct Model {
+    // MARK: Data
+    struct Data {
         let transactionsCount: Int
-        let transactionsSumFormatted: String
+        let balanceFormatted: String
         let items: [TransactionItem]
     }
 
+    // MARK: Event
     enum Event {
         case detail(TransactionItem)
     }
@@ -39,42 +41,25 @@ struct TransactionsView: View, OnEventProtocol {
                     Text("loading".localized)
                 }
 
-            case .ready(let model):
+            case .ready(let data):
                 ScrollView {
                     Group {
                         VStack {
-                            HStack {
-                                Text("\("transactions.balance".localized) \(model.transactionsSumFormatted)")
-                                    .foregroundColor(Color.primary)
-                                    .bold()
+                            balance(balanceFormatted: data.balanceFormatted)
 
-                                Spacer()
-                            }
-
-                            HStack {
-                                Text("transactions.count".localized)
-                                    .foregroundColor(Color.primary)
-                                    .bold()
-
-                                Text("\(model.transactionsCount)")
-                                    .foregroundColor(Color.primary)
-                                    .bold()
-
-                                Spacer()
-                            }
-                            .padding(.top, 6)
-                            .padding(.bottom, 12)
+                            transactionsInfo(transactionsCount: data.transactionsCount)
                         }
 
+                        // We can't use LazyVStack for older iOS & List component doesn't provide good UI.
                         if #available(iOS 14.0, *) {
                             LazyVStack(alignment: .leading) {
-                                ForEach(model.items) { item in
+                                ForEach(data.items) { item in
                                     transactionItem(item)
                                 }
                             }
                         } else {
                             VStack(alignment: .leading) {
-                                ForEach(model.items) { item in
+                                ForEach(data.items) { item in
                                     transactionItem(item)
                                 }
                             }
@@ -101,6 +86,38 @@ struct TransactionsView: View, OnEventProtocol {
         .onAppear {
             viewModel.loadData()
         }
+    }
+}
+
+private extension TransactionsView {
+    // MARK: balance
+    @ViewBuilder
+    func balance(balanceFormatted: String) -> some View {
+        HStack {
+            Text("\("transactions.balance".localized) \(balanceFormatted)")
+                .foregroundColor(Color.primary)
+                .bold()
+
+            Spacer()
+        }
+    }
+
+    // MARK: balance
+    @ViewBuilder
+    func transactionsInfo(transactionsCount: Int) -> some View {
+        HStack {
+            Text("transactions.count".localized)
+                .foregroundColor(Color.primary)
+                .bold()
+
+            Text("\(transactionsCount)")
+                .foregroundColor(Color.primary)
+                .bold()
+
+            Spacer()
+        }
+        .padding(.top, 6)
+        .padding(.bottom, 12)
     }
 
     // MARK: transactionItem
