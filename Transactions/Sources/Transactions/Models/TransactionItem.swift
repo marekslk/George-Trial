@@ -10,8 +10,8 @@ import Foundation
 
 public struct TransactionRowItem: Identifiable {
     public let id: String
-    public let title: String
-    public let subtitle: String?
-    public let additionalTexts: [String]
-    public let amountFormatted: String
+    let title: String
+    let subtitle: String?
+    let additionalTexts: [String]
+    let amountFormatted: String
 }
