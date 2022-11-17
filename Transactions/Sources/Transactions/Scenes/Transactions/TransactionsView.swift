@@ -127,45 +127,43 @@ private extension TransactionsView {
     // MARK: transactionItem
     @ViewBuilder
     private func transactionItem(_ model: TransactionRowItem) -> some View {
-        HStack {
-            VStack(alignment: .leading) {
-                HStack {
-                    Text(model.title)
-                        .font(.body)
-                        .foregroundColor(Color.primary)
+        Button(action: { onEvent(.detail(model)) }) {
+            HStack {
+                VStack(alignment: .leading) {
+                    HStack {
+                        Text(model.title)
+                            .font(.body)
+                            .foregroundColor(Color.primary)
 
-                    Spacer()
-                    
-                    Text(model.amountFormatted)
-                        .font(.body)
-                        .bold()
-                        .foregroundColor(Color.primary)
-                }
+                        Spacer()
 
-                if let subtitle = model.subtitle {
-                    Text(subtitle)
-                        .font(.caption)
-                        .foregroundColor(Color.secondary)
-                }
-
-                if !model.additionalTexts.isEmpty {
-                    Spacer()
-                        .frame(height: 12)
-
-                    ForEach(model.additionalTexts, id: \.self) { line in
-                        Text(line)
-                            .font(.caption)
-                            .foregroundColor(Color.secondary.opacity(0.8))
+                        Text(model.amountFormatted)
+                            .font(.body)
+                            .bold()
+                            .foregroundColor(Color.primary)
                     }
-                }
 
-                Divider()
-                    .padding(.top, 12)
+                    if let subtitle = model.subtitle {
+                        Text(subtitle)
+                            .font(.caption)
+                            .foregroundColor(Color.secondary)
+                    }
+
+                    if !model.additionalTexts.isEmpty {
+                        Spacer()
+                            .frame(height: 12)
+
+                        ForEach(model.additionalTexts, id: \.self) { line in
+                            Text(line)
+                                .font(.caption)
+                                .foregroundColor(Color.secondary.opacity(0.8))
+                        }
+                    }
+
+                    Divider()
+                        .padding(.top, 12)
+                }
             }
-        }
-        .contentShape(Rectangle())
-        .onTapGesture {
-            onEvent(.detail(model))
         }
     }
 }
