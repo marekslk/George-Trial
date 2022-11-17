@@ -9,18 +9,18 @@
 import Foundation
 
 @propertyWrapper
-struct UserDefaultWrapper<T> {
-    let key: String
-    let defaultValue: T
-    let userDefaults: UserDefaults
+public struct UserDefaultWrapper<T> {
+    public let key: String
+    public let defaultValue: T
+    public let userDefaults: UserDefaults
 
-    init(_ key: UserDefaultsProvider.Key, defaultValue: T, userDefaults: UserDefaults = UserDefaults.standard) {
+    public init(_ key: UserDefaultsProvider.Key, defaultValue: T, userDefaults: UserDefaults = UserDefaults.standard) {
         self.key = key.rawValue
         self.defaultValue = defaultValue
         self.userDefaults = userDefaults
     }
 
-    var wrappedValue: T {
+    public var wrappedValue: T {
         get {
             guard let value = userDefaults.object(forKey: key) else {
                 return defaultValue

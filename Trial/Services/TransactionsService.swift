@@ -8,6 +8,7 @@
 
 import Foundation
 import Combine
+import TrialCore
 
 protocol TransactionsServicing {
     func transactions() -> Future<[Transaction], APIError>

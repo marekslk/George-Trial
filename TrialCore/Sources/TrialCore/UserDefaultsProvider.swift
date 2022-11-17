@@ -8,11 +8,11 @@
 
 import Foundation
 
-enum UserDefaultsProvider {
-    enum Key: String {
+public enum UserDefaultsProvider {
+    public enum Key: String {
         case userWasOnboarded
     }
 
     @UserDefaultWrapper(.userWasOnboarded, defaultValue: false)
-    static var userWasOnboarded: Bool
+    public static var userWasOnboarded: Bool
 }

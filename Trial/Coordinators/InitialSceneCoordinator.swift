@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import TrialCore
 
 // MARK: InitialSceneCoordinating
 protocol InitialSceneCoordinating: Coordinator {

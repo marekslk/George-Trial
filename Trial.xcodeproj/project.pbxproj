@@ -15,7 +15,6 @@
 		8F4A4CA12920E32A00D26A11 /* TransactionsService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F4A4CA02920E32A00D26A11 /* TransactionsService.swift */; };
 		8F4A4CA52920E4B000D26A11 /* Locator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F4A4CA42920E4B000D26A11 /* Locator.swift */; };
 		8F4A4CA72920E81900D26A11 /* DependencyInjection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F4A4CA62920E81900D26A11 /* DependencyInjection.swift */; };
-		8F4A4CA92920E9E200D26A11 /* APIError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F4A4CA82920E9E200D26A11 /* APIError.swift */; };
 		8F4A4CAC2920EA0300D26A11 /* Transaction.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F4A4CAB2920EA0300D26A11 /* Transaction.swift */; };
 		8F4A4CAE2920EAD000D26A11 /* AccountNumber.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F4A4CAD2920EAD000D26A11 /* AccountNumber.swift */; };
 		8F4A4CB02920EAFD00D26A11 /* AdditionalTexts.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F4A4CAF2920EAFD00D26A11 /* AdditionalTexts.swift */; };
@@ -27,8 +26,6 @@
 		8FF0E9CA291F7B1700DA2D3D /* NSDecimalNumberExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8FF0E9C9291F7B1700DA2D3D /* NSDecimalNumberExtensions.swift */; };
 		8FF0E9CC291F7C2500DA2D3D /* Coordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8FF0E9CB291F7C2500DA2D3D /* Coordinator.swift */; };
 		8FF0E9CE291F7D7000DA2D3D /* InitialSceneCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8FF0E9CD291F7D7000DA2D3D /* InitialSceneCoordinator.swift */; };
-		8FF0E9D0291FD71800DA2D3D /* UserDefaultWrapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8FF0E9CF291FD71800DA2D3D /* UserDefaultWrapper.swift */; };
-		8FF0E9D2291FD74200DA2D3D /* UserDefaultsProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8FF0E9D1291FD74200DA2D3D /* UserDefaultsProvider.swift */; };
 		8FF0E9D5291FD9D300DA2D3D /* OnboardingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8FF0E9D4291FD9D300DA2D3D /* OnboardingView.swift */; };
 		8FF0E9D9291FDDE100DA2D3D /* OnboardingCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8FF0E9D8291FDDE100DA2D3D /* OnboardingCoordinator.swift */; };
 		E1070CA8203B219B009EECE4 /* TransactionResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1070CA7203B219B009EECE4 /* TransactionResponse.swift */; };
@@ -60,7 +57,6 @@
 		8F4A4CA02920E32A00D26A11 /* TransactionsService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransactionsService.swift; sourceTree = "<group>"; };
 		8F4A4CA42920E4B000D26A11 /* Locator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Locator.swift; sourceTree = "<group>"; };
 		8F4A4CA62920E81900D26A11 /* DependencyInjection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DependencyInjection.swift; sourceTree = "<group>"; };
-		8F4A4CA82920E9E200D26A11 /* APIError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIError.swift; sourceTree = "<group>"; };
 		8F4A4CAB2920EA0300D26A11 /* Transaction.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Transaction.swift; sourceTree = "<group>"; };
 		8F4A4CAD2920EAD000D26A11 /* AccountNumber.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountNumber.swift; sourceTree = "<group>"; };
 		8F4A4CAF2920EAFD00D26A11 /* AdditionalTexts.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AdditionalTexts.swift; sourceTree = "<group>"; };
@@ -72,8 +68,6 @@
 		8FF0E9C9291F7B1700DA2D3D /* NSDecimalNumberExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NSDecimalNumberExtensions.swift; sourceTree = "<group>"; };
 		8FF0E9CB291F7C2500DA2D3D /* Coordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Coordinator.swift; sourceTree = "<group>"; };
 		8FF0E9CD291F7D7000DA2D3D /* InitialSceneCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InitialSceneCoordinator.swift; sourceTree = "<group>"; };
-		8FF0E9CF291FD71800DA2D3D /* UserDefaultWrapper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDefaultWrapper.swift; sourceTree = "<group>"; };
-		8FF0E9D1291FD74200DA2D3D /* UserDefaultsProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDefaultsProvider.swift; sourceTree = "<group>"; };
 		8FF0E9D4291FD9D300DA2D3D /* OnboardingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingView.swift; sourceTree = "<group>"; };
 		8FF0E9D8291FDDE100DA2D3D /* OnboardingCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingCoordinator.swift; sourceTree = "<group>"; };
 		E1070CA7203B219B009EECE4 /* TransactionResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransactionResponse.swift; sourceTree = "<group>"; };
@@ -137,8 +131,6 @@
 		8F4A4CA22920E49500D26A11 /* Utils */ = {
 			isa = PBXGroup;
 			children = (
-				8FF0E9D1291FD74200DA2D3D /* UserDefaultsProvider.swift */,
-				8FF0E9CF291FD71800DA2D3D /* UserDefaultWrapper.swift */,
 				8F4A4CA32920E4A300D26A11 /* DependencyInjection */,
 			);
 			path = Utils;
@@ -207,7 +199,6 @@
 			isa = PBXGroup;
 			children = (
 				8F4A4CAA2920E9F100D26A11 /* TransactionRelated */,
-				8F4A4CA82920E9E200D26A11 /* APIError.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -408,13 +399,11 @@
 				8F4A4CAC2920EA0300D26A11 /* Transaction.swift in Sources */,
 				8FF0E9CC291F7C2500DA2D3D /* Coordinator.swift in Sources */,
 				8FF0E9D5291FD9D300DA2D3D /* OnboardingView.swift in Sources */,
-				8FF0E9D0291FD71800DA2D3D /* UserDefaultWrapper.swift in Sources */,
 				8F125E47291FE376005DF57E /* TransactionsView.swift in Sources */,
 				E1070CA8203B219B009EECE4 /* TransactionResponse.swift in Sources */,
 				8F4A4C992920301A00D26A11 /* TransactionItem.swift in Sources */,
 				8FA2B370291FFD430010BD9B /* TransactionsCoordinator.swift in Sources */,
 				8F4A4CA72920E81900D26A11 /* DependencyInjection.swift in Sources */,
-				8F4A4CA92920E9E200D26A11 /* APIError.swift in Sources */,
 				8FF0E9CE291F7D7000DA2D3D /* InitialSceneCoordinator.swift in Sources */,
 				8F4A4C9C292030E200D26A11 /* TransactionDetailView.swift in Sources */,
 				8F4A4C9E2920312000D26A11 /* TransactionDetailViewModel.swift in Sources */,
@@ -424,7 +413,6 @@
 				8FF0E9CA291F7B1700DA2D3D /* NSDecimalNumberExtensions.swift in Sources */,
 				8F4A4CB22920EB0F00D26A11 /* Amount.swift in Sources */,
 				8FF0E9D9291FDDE100DA2D3D /* OnboardingCoordinator.swift in Sources */,
-				8FF0E9D2291FD74200DA2D3D /* UserDefaultsProvider.swift in Sources */,
 				8F4A4CA12920E32A00D26A11 /* TransactionsService.swift in Sources */,
 				8F4A4CB02920EAFD00D26A11 /* AdditionalTexts.swift in Sources */,
 				8F4A4CAE2920EAD000D26A11 /* AccountNumber.swift in Sources */,
