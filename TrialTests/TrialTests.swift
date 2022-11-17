@@ -4,6 +4,8 @@
 
 import XCTest
 import Combine
+import TrialCore
+import Transactions
 @testable import Trial
 
 class TrialTests: XCTestCase {
