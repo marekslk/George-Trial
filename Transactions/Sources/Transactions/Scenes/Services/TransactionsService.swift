@@ -10,20 +10,20 @@ import Foundation
 import Combine
 import TrialCore
 
-protocol TransactionsServicing {
+public protocol TransactionsServicing {
     func transactions() -> Future<[Transaction], APIError>
 }
 
-final class TransactionsService {
+public final class TransactionsService {
     private let transactionsAPI: TransactionsAPI
 
-    init(transactionsAPI: TransactionsAPI) {
+    public init(transactionsAPI: TransactionsAPI) {
         self.transactionsAPI = transactionsAPI
     }
 }
 
 extension TransactionsService: TransactionsServicing {
-    func transactions() -> Future<[Transaction], APIError> {
+    public func transactions() -> Future<[Transaction], APIError> {
         transactionsAPI.loadTransactions()
     }
 }

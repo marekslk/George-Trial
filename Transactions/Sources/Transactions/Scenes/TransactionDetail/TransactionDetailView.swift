@@ -9,28 +9,28 @@
 import SwiftUI
 import TrialCore
 
-struct TransactionDetailView: View, OnEventProtocol {
+public struct TransactionDetailView: View, OnEventProtocol {
     @ObservedObject var viewModel: TransactionDetailViewModel
 
-    enum Event {
+    public enum Event {
     }
 
-    var onEvent: (Event) -> Void
+    public var onEvent: (Event) -> Void
 
-    init(viewModel: TransactionDetailViewModel, onEvent: @escaping (Event) -> Void) {
+    public init(viewModel: TransactionDetailViewModel, onEvent: @escaping (Event) -> Void) {
         _viewModel = ObservedObject(wrappedValue: viewModel)
         self.onEvent = onEvent
     }
 
     // MARK: body
-    var body: some View {
+    public var body: some View {
         VStack {
             switch viewModel.state {
             case .loading:
                 if #available(iOS 14.0, *) {
                     ProgressView()
                 } else {
-                    Text("loading".localized)
+                    Text("loading")//.localized)
                 }
 
             case .ready(let item):
@@ -57,7 +57,7 @@ struct TransactionDetailView: View, OnEventProtocol {
                     Button(action: {
                         viewModel.loadData()
                     }, label: {
-                        Text("retry".localized)
+                        Text("retry")//.localized)
                     })
                 }
 

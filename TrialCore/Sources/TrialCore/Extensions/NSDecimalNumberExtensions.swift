@@ -8,7 +8,7 @@
 
 import Foundation
 
-extension NSDecimalNumber {
+public extension NSDecimalNumber {
 
     var integerValueWithPrecision2: Int {
         let decimalNumberBehavior = NSDecimalNumberHandler(

@@ -8,6 +8,9 @@ import TrialCore
 
 public final class TransactionsAPI {
 
+    public init() {
+    }
+
     /// Loads a list of transaction - you can assume that all transactions have the same currency
     public func loadTransactions() -> Future<[Transaction], APIError> {
         Future { promise in

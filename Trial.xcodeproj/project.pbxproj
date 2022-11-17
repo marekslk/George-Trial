@@ -7,33 +7,19 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		8F125E47291FE376005DF57E /* TransactionsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F125E46291FE375005DF57E /* TransactionsView.swift */; };
-		8F125E49291FE381005DF57E /* TransactionsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F125E48291FE381005DF57E /* TransactionsViewModel.swift */; };
-		8F4A4C992920301A00D26A11 /* TransactionItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F4A4C982920301A00D26A11 /* TransactionItem.swift */; };
-		8F4A4C9C292030E200D26A11 /* TransactionDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F4A4C9B292030E200D26A11 /* TransactionDetailView.swift */; };
-		8F4A4C9E2920312000D26A11 /* TransactionDetailViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F4A4C9D2920312000D26A11 /* TransactionDetailViewModel.swift */; };
-		8F4A4CA12920E32A00D26A11 /* TransactionsService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F4A4CA02920E32A00D26A11 /* TransactionsService.swift */; };
-		8F4A4CA52920E4B000D26A11 /* Locator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F4A4CA42920E4B000D26A11 /* Locator.swift */; };
 		8F4A4CA72920E81900D26A11 /* DependencyInjection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F4A4CA62920E81900D26A11 /* DependencyInjection.swift */; };
-		8F4A4CAC2920EA0300D26A11 /* Transaction.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F4A4CAB2920EA0300D26A11 /* Transaction.swift */; };
-		8F4A4CAE2920EAD000D26A11 /* AccountNumber.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F4A4CAD2920EAD000D26A11 /* AccountNumber.swift */; };
-		8F4A4CB02920EAFD00D26A11 /* AdditionalTexts.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F4A4CAF2920EAFD00D26A11 /* AdditionalTexts.swift */; };
-		8F4A4CB22920EB0F00D26A11 /* Amount.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F4A4CB12920EB0F00D26A11 /* Amount.swift */; };
 		8FA2B370291FFD430010BD9B /* TransactionsCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8FA2B36F291FFD430010BD9B /* TransactionsCoordinator.swift */; };
 		8FA2B373292001160010BD9B /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 8FA2B375292001160010BD9B /* Localizable.strings */; };
-		8FA2B377292001760010BD9B /* String+localized.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8FA2B376292001760010BD9B /* String+localized.swift */; };
 		8FEDC0AC2926302200C461F4 /* TrialCore in Frameworks */ = {isa = PBXBuildFile; productRef = 8FEDC0AB2926302200C461F4 /* TrialCore */; };
-		8FF0E9CA291F7B1700DA2D3D /* NSDecimalNumberExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8FF0E9C9291F7B1700DA2D3D /* NSDecimalNumberExtensions.swift */; };
+		8FEDC0AF2926467B00C461F4 /* Transactions in Frameworks */ = {isa = PBXBuildFile; productRef = 8FEDC0AE2926467B00C461F4 /* Transactions */; };
 		8FF0E9CC291F7C2500DA2D3D /* Coordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8FF0E9CB291F7C2500DA2D3D /* Coordinator.swift */; };
 		8FF0E9CE291F7D7000DA2D3D /* InitialSceneCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8FF0E9CD291F7D7000DA2D3D /* InitialSceneCoordinator.swift */; };
 		8FF0E9D5291FD9D300DA2D3D /* OnboardingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8FF0E9D4291FD9D300DA2D3D /* OnboardingView.swift */; };
 		8FF0E9D9291FDDE100DA2D3D /* OnboardingCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8FF0E9D8291FDDE100DA2D3D /* OnboardingCoordinator.swift */; };
-		E1070CA8203B219B009EECE4 /* TransactionResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1070CA7203B219B009EECE4 /* TransactionResponse.swift */; };
 		E1088D4D2031E49300889B04 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1088D4C2031E49300889B04 /* AppDelegate.swift */; };
 		E1088D542031E49300889B04 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E1088D532031E49300889B04 /* Assets.xcassets */; };
 		E1088D572031E49300889B04 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E1088D552031E49300889B04 /* LaunchScreen.storyboard */; };
 		E1088D622031E49300889B04 /* TrialTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1088D612031E49300889B04 /* TrialTests.swift */; };
-		E1088D6F2031E67A00889B04 /* TransactionsAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1088D6E2031E67A00889B04 /* TransactionsAPI.swift */; };
 		E1088D722031F75600889B04 /* transactions.json in Resources */ = {isa = PBXBuildFile; fileRef = E1088D712031F75600889B04 /* transactions.json */; };
 		E12ED191203A0FA400F39631 /* transactions.json in Resources */ = {isa = PBXBuildFile; fileRef = E1088D712031F75600889B04 /* transactions.json */; };
 /* End PBXBuildFile section */
@@ -49,28 +35,15 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		8F125E46291FE375005DF57E /* TransactionsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransactionsView.swift; sourceTree = "<group>"; };
-		8F125E48291FE381005DF57E /* TransactionsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransactionsViewModel.swift; sourceTree = "<group>"; };
-		8F4A4C982920301A00D26A11 /* TransactionItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransactionItem.swift; sourceTree = "<group>"; };
-		8F4A4C9B292030E200D26A11 /* TransactionDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransactionDetailView.swift; sourceTree = "<group>"; };
-		8F4A4C9D2920312000D26A11 /* TransactionDetailViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransactionDetailViewModel.swift; sourceTree = "<group>"; };
-		8F4A4CA02920E32A00D26A11 /* TransactionsService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransactionsService.swift; sourceTree = "<group>"; };
-		8F4A4CA42920E4B000D26A11 /* Locator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Locator.swift; sourceTree = "<group>"; };
 		8F4A4CA62920E81900D26A11 /* DependencyInjection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DependencyInjection.swift; sourceTree = "<group>"; };
-		8F4A4CAB2920EA0300D26A11 /* Transaction.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Transaction.swift; sourceTree = "<group>"; };
-		8F4A4CAD2920EAD000D26A11 /* AccountNumber.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountNumber.swift; sourceTree = "<group>"; };
-		8F4A4CAF2920EAFD00D26A11 /* AdditionalTexts.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AdditionalTexts.swift; sourceTree = "<group>"; };
-		8F4A4CB12920EB0F00D26A11 /* Amount.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Amount.swift; sourceTree = "<group>"; };
 		8FA2B36F291FFD430010BD9B /* TransactionsCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransactionsCoordinator.swift; sourceTree = "<group>"; };
 		8FA2B374292001160010BD9B /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
-		8FA2B376292001760010BD9B /* String+localized.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+localized.swift"; sourceTree = "<group>"; };
 		8FEDC0A929262F8D00C461F4 /* TrialCore */ = {isa = PBXFileReference; lastKnownFileType = wrapper; path = TrialCore; sourceTree = "<group>"; };
-		8FF0E9C9291F7B1700DA2D3D /* NSDecimalNumberExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NSDecimalNumberExtensions.swift; sourceTree = "<group>"; };
+		8FEDC0AD292645EB00C461F4 /* Transactions */ = {isa = PBXFileReference; lastKnownFileType = wrapper; path = Transactions; sourceTree = "<group>"; };
 		8FF0E9CB291F7C2500DA2D3D /* Coordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Coordinator.swift; sourceTree = "<group>"; };
 		8FF0E9CD291F7D7000DA2D3D /* InitialSceneCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InitialSceneCoordinator.swift; sourceTree = "<group>"; };
 		8FF0E9D4291FD9D300DA2D3D /* OnboardingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingView.swift; sourceTree = "<group>"; };
 		8FF0E9D8291FDDE100DA2D3D /* OnboardingCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingCoordinator.swift; sourceTree = "<group>"; };
-		E1070CA7203B219B009EECE4 /* TransactionResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransactionResponse.swift; sourceTree = "<group>"; };
 		E1088D492031E49300889B04 /* Trial.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Trial.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E1088D4C2031E49300889B04 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		E1088D532031E49300889B04 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -79,7 +52,6 @@
 		E1088D5D2031E49300889B04 /* TrialTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TrialTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		E1088D612031E49300889B04 /* TrialTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrialTests.swift; sourceTree = "<group>"; };
 		E1088D632031E49300889B04 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		E1088D6E2031E67A00889B04 /* TransactionsAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransactionsAPI.swift; sourceTree = "<group>"; };
 		E1088D712031F75600889B04 /* transactions.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = transactions.json; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -89,6 +61,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				8FEDC0AC2926302200C461F4 /* TrialCore in Frameworks */,
+				8FEDC0AF2926467B00C461F4 /* Transactions in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -102,32 +75,6 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		8F125E45291FE369005DF57E /* Transactions */ = {
-			isa = PBXGroup;
-			children = (
-				8F125E46291FE375005DF57E /* TransactionsView.swift */,
-				8F125E48291FE381005DF57E /* TransactionsViewModel.swift */,
-			);
-			path = Transactions;
-			sourceTree = "<group>";
-		};
-		8F4A4C9A292030D300D26A11 /* TransactionDetail */ = {
-			isa = PBXGroup;
-			children = (
-				8F4A4C9B292030E200D26A11 /* TransactionDetailView.swift */,
-				8F4A4C9D2920312000D26A11 /* TransactionDetailViewModel.swift */,
-			);
-			path = TransactionDetail;
-			sourceTree = "<group>";
-		};
-		8F4A4C9F2920E31900D26A11 /* API */ = {
-			isa = PBXGroup;
-			children = (
-				E1088D6E2031E67A00889B04 /* TransactionsAPI.swift */,
-			);
-			path = API;
-			sourceTree = "<group>";
-		};
 		8F4A4CA22920E49500D26A11 /* Utils */ = {
 			isa = PBXGroup;
 			children = (
@@ -140,22 +87,8 @@
 			isa = PBXGroup;
 			children = (
 				8F4A4CA62920E81900D26A11 /* DependencyInjection.swift */,
-				8F4A4CA42920E4B000D26A11 /* Locator.swift */,
 			);
 			path = DependencyInjection;
-			sourceTree = "<group>";
-		};
-		8F4A4CAA2920E9F100D26A11 /* TransactionRelated */ = {
-			isa = PBXGroup;
-			children = (
-				E1070CA7203B219B009EECE4 /* TransactionResponse.swift */,
-				8F4A4C982920301A00D26A11 /* TransactionItem.swift */,
-				8F4A4CAB2920EA0300D26A11 /* Transaction.swift */,
-				8F4A4CAD2920EAD000D26A11 /* AccountNumber.swift */,
-				8F4A4CAF2920EAFD00D26A11 /* AdditionalTexts.swift */,
-				8F4A4CB12920EB0F00D26A11 /* Amount.swift */,
-			);
-			path = TransactionRelated;
 			sourceTree = "<group>";
 		};
 		8FEDC0AA2926302200C461F4 /* Frameworks */ = {
@@ -186,29 +119,10 @@
 			path = Resources;
 			sourceTree = "<group>";
 		};
-		8FF0E9C4291F7AAE00DA2D3D /* Services */ = {
-			isa = PBXGroup;
-			children = (
-				8F4A4C9F2920E31900D26A11 /* API */,
-				8F4A4CA02920E32A00D26A11 /* TransactionsService.swift */,
-			);
-			path = Services;
-			sourceTree = "<group>";
-		};
-		8FF0E9C5291F7AB700DA2D3D /* Models */ = {
-			isa = PBXGroup;
-			children = (
-				8F4A4CAA2920E9F100D26A11 /* TransactionRelated */,
-			);
-			path = Models;
-			sourceTree = "<group>";
-		};
 		8FF0E9C6291F7ABD00DA2D3D /* Scenes */ = {
 			isa = PBXGroup;
 			children = (
 				8FF0E9D3291FD9C600DA2D3D /* Onboarding */,
-				8F4A4C9A292030D300D26A11 /* TransactionDetail */,
-				8F125E45291FE369005DF57E /* Transactions */,
 			);
 			path = Scenes;
 			sourceTree = "<group>";
@@ -224,15 +138,6 @@
 			path = Coordinators;
 			sourceTree = "<group>";
 		};
-		8FF0E9C8291F7AFC00DA2D3D /* Extensions */ = {
-			isa = PBXGroup;
-			children = (
-				8FF0E9C9291F7B1700DA2D3D /* NSDecimalNumberExtensions.swift */,
-				8FA2B376292001760010BD9B /* String+localized.swift */,
-			);
-			path = Extensions;
-			sourceTree = "<group>";
-		};
 		8FF0E9D3291FD9C600DA2D3D /* Onboarding */ = {
 			isa = PBXGroup;
 			children = (
@@ -244,6 +149,7 @@
 		E1088D402031E49300889B04 = {
 			isa = PBXGroup;
 			children = (
+				8FEDC0AD292645EB00C461F4 /* Transactions */,
 				8FEDC0A929262F8D00C461F4 /* TrialCore */,
 				E1088D4B2031E49300889B04 /* Trial */,
 				E1088D602031E49300889B04 /* TrialTests */,
@@ -266,10 +172,7 @@
 			children = (
 				8FF0E9C2291F790700DA2D3D /* Application */,
 				8FF0E9C7291F7ADF00DA2D3D /* Coordinators */,
-				8FF0E9C8291F7AFC00DA2D3D /* Extensions */,
-				8FF0E9C5291F7AB700DA2D3D /* Models */,
 				8FF0E9C6291F7ABD00DA2D3D /* Scenes */,
-				8FF0E9C4291F7AAE00DA2D3D /* Services */,
 				8F4A4CA22920E49500D26A11 /* Utils */,
 			);
 			path = Trial;
@@ -302,6 +205,7 @@
 			name = Trial;
 			packageProductDependencies = (
 				8FEDC0AB2926302200C461F4 /* TrialCore */,
+				8FEDC0AE2926467B00C461F4 /* Transactions */,
 			);
 			productName = Trial;
 			productReference = E1088D492031E49300889B04 /* Trial.app */;
@@ -395,27 +299,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				E1088D4D2031E49300889B04 /* AppDelegate.swift in Sources */,
-				E1088D6F2031E67A00889B04 /* TransactionsAPI.swift in Sources */,
-				8F4A4CAC2920EA0300D26A11 /* Transaction.swift in Sources */,
 				8FF0E9CC291F7C2500DA2D3D /* Coordinator.swift in Sources */,
 				8FF0E9D5291FD9D300DA2D3D /* OnboardingView.swift in Sources */,
-				8F125E47291FE376005DF57E /* TransactionsView.swift in Sources */,
-				E1070CA8203B219B009EECE4 /* TransactionResponse.swift in Sources */,
-				8F4A4C992920301A00D26A11 /* TransactionItem.swift in Sources */,
 				8FA2B370291FFD430010BD9B /* TransactionsCoordinator.swift in Sources */,
 				8F4A4CA72920E81900D26A11 /* DependencyInjection.swift in Sources */,
 				8FF0E9CE291F7D7000DA2D3D /* InitialSceneCoordinator.swift in Sources */,
-				8F4A4C9C292030E200D26A11 /* TransactionDetailView.swift in Sources */,
-				8F4A4C9E2920312000D26A11 /* TransactionDetailViewModel.swift in Sources */,
-				8FA2B377292001760010BD9B /* String+localized.swift in Sources */,
-				8F4A4CA52920E4B000D26A11 /* Locator.swift in Sources */,
-				8F125E49291FE381005DF57E /* TransactionsViewModel.swift in Sources */,
-				8FF0E9CA291F7B1700DA2D3D /* NSDecimalNumberExtensions.swift in Sources */,
-				8F4A4CB22920EB0F00D26A11 /* Amount.swift in Sources */,
 				8FF0E9D9291FDDE100DA2D3D /* OnboardingCoordinator.swift in Sources */,
-				8F4A4CA12920E32A00D26A11 /* TransactionsService.swift in Sources */,
-				8F4A4CB02920EAFD00D26A11 /* AdditionalTexts.swift in Sources */,
-				8F4A4CAE2920EAD000D26A11 /* AccountNumber.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -687,6 +576,10 @@
 		8FEDC0AB2926302200C461F4 /* TrialCore */ = {
 			isa = XCSwiftPackageProductDependency;
 			productName = TrialCore;
+		};
+		8FEDC0AE2926467B00C461F4 /* Transactions */ = {
+			isa = XCSwiftPackageProductDependency;
+			productName = Transactions;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};

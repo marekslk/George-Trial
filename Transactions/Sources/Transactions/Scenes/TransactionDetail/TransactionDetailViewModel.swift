@@ -11,12 +11,12 @@ import Combine
 import SwiftUI
 import TrialCore
 
-final class TransactionDetailViewModel: ObservableObject {
+public final class TransactionDetailViewModel: ObservableObject {
     @Published private(set) var state: ViewModelingState<TransactionRowItem>?
 
     private let transactionRowItem: TransactionRowItem
     
-    init(transactionRowItem: TransactionRowItem) {
+    public init(transactionRowItem: TransactionRowItem) {
         self.transactionRowItem = transactionRowItem
     }
 

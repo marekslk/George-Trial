@@ -12,12 +12,16 @@ import SwiftUI
 import TrialCore
 
 // MARK: TransactionsViewModel
-final class TransactionsViewModel: ObservableObject {
+public final class TransactionsViewModel: ObservableObject {
     @Locatable private var transactionsService: TransactionsServicing
 
     @Published private(set) var state: ViewModelingState<TransactionsView.Data>?
 
     private var cancellables = Set<AnyCancellable>()
+
+    public init() {
+        
+    }
 
     func loadData() {
         state = .loading

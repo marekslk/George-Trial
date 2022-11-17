@@ -3,6 +3,7 @@
 //
 
 import UIKit
+import TrialCore
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {

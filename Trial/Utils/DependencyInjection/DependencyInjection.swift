@@ -7,8 +7,10 @@
 //
 
 import Foundation
+import TrialCore
+import Transactions
 
-extension Locator {
+public extension Locator {
     /// Used to setup all app related services
     static func registerAppServices() {
         let transactionsAPI = TransactionsAPI()

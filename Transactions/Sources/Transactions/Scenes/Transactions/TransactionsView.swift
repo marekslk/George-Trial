@@ -9,37 +9,37 @@
 import SwiftUI
 import TrialCore
 
-struct TransactionsView: View, OnEventProtocol {
+public struct TransactionsView: View, OnEventProtocol {
     @ObservedObject var viewModel: TransactionsViewModel
 
     // MARK: Data
-    struct Data {
+    public struct Data {
         let transactionsCount: Int
         let balanceFormatted: String
         let items: [TransactionRowItem]
     }
 
     // MARK: Event
-    enum Event {
+    public enum Event {
         case detail(TransactionRowItem)
     }
 
-    var onEvent: (Event) -> Void
+    public var onEvent: (Event) -> Void
 
-    init(viewModel: TransactionsViewModel, onEvent: @escaping (Event) -> Void) {
+    public init(viewModel: TransactionsViewModel, onEvent: @escaping (Event) -> Void) {
         _viewModel = ObservedObject(wrappedValue: viewModel)
         self.onEvent = onEvent
     }
 
     // MARK: body
-    var body: some View {
+    public var body: some View {
         VStack {
             switch viewModel.state {
             case .loading:
                 if #available(iOS 14.0, *) {
                     ProgressView()
                 } else {
-                    Text("loading".localized)
+                    Text("loading")//.localized)
                 }
 
             case .ready(let data):
@@ -77,7 +77,7 @@ struct TransactionsView: View, OnEventProtocol {
                     Button(action: {
                         viewModel.loadData()
                     }, label: {
-                        Text("retry".localized)
+                        Text("retry")//.localized)
                     })
                 }
 
@@ -96,7 +96,8 @@ private extension TransactionsView {
     @ViewBuilder
     func balance(balanceFormatted: String) -> some View {
         HStack {
-            Text("\("transactions.balance".localized) \(balanceFormatted)")
+//            Text("\("transactions.balance".localized) \(balanceFormatted)")
+            Text("transactions.balance \(balanceFormatted)")
                 .foregroundColor(Color.primary)
                 .bold()
 
@@ -108,7 +109,7 @@ private extension TransactionsView {
     @ViewBuilder
     func transactionsInfo(transactionsCount: Int) -> some View {
         HStack {
-            Text("transactions.count".localized)
+            Text("transactions.count")//.localized)
                 .foregroundColor(Color.primary)
                 .bold()
 

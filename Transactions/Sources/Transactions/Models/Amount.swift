@@ -7,16 +7,17 @@
 //
 
 import Foundation
+import TrialCore
 
 public struct Amount: Decodable {
 
-    let value: Int
-    let precision: Int
-    let currency: String
+    public let value: Int
+    public let precision: Int
+    public let currency: String
 
 }
 
-extension Amount {
+public extension Amount {
 
     var decimalValue: NSDecimalNumber {
         get {
@@ -31,7 +32,7 @@ extension Amount {
         }
     }
 
-    public init(decimalValue: NSDecimalNumber, currency: String) {
+    init(decimalValue: NSDecimalNumber, currency: String) {
         self.currency = currency
         self.precision = 2
 
