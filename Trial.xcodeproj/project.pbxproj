@@ -12,9 +12,9 @@
 		8FA2B373292001160010BD9B /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 8FA2B375292001160010BD9B /* Localizable.strings */; };
 		8FEDC0AC2926302200C461F4 /* TrialCore in Frameworks */ = {isa = PBXBuildFile; productRef = 8FEDC0AB2926302200C461F4 /* TrialCore */; };
 		8FEDC0AF2926467B00C461F4 /* Transactions in Frameworks */ = {isa = PBXBuildFile; productRef = 8FEDC0AE2926467B00C461F4 /* Transactions */; };
+		8FEDC0B22926520B00C461F4 /* Onboarding in Frameworks */ = {isa = PBXBuildFile; productRef = 8FEDC0B12926520B00C461F4 /* Onboarding */; };
 		8FF0E9CC291F7C2500DA2D3D /* Coordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8FF0E9CB291F7C2500DA2D3D /* Coordinator.swift */; };
 		8FF0E9CE291F7D7000DA2D3D /* InitialSceneCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8FF0E9CD291F7D7000DA2D3D /* InitialSceneCoordinator.swift */; };
-		8FF0E9D5291FD9D300DA2D3D /* OnboardingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8FF0E9D4291FD9D300DA2D3D /* OnboardingView.swift */; };
 		8FF0E9D9291FDDE100DA2D3D /* OnboardingCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8FF0E9D8291FDDE100DA2D3D /* OnboardingCoordinator.swift */; };
 		E1088D4D2031E49300889B04 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1088D4C2031E49300889B04 /* AppDelegate.swift */; };
 		E1088D542031E49300889B04 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E1088D532031E49300889B04 /* Assets.xcassets */; };
@@ -40,9 +40,9 @@
 		8FA2B374292001160010BD9B /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
 		8FEDC0A929262F8D00C461F4 /* TrialCore */ = {isa = PBXFileReference; lastKnownFileType = wrapper; path = TrialCore; sourceTree = "<group>"; };
 		8FEDC0AD292645EB00C461F4 /* Transactions */ = {isa = PBXFileReference; lastKnownFileType = wrapper; path = Transactions; sourceTree = "<group>"; };
+		8FEDC0B0292651E100C461F4 /* Onboarding */ = {isa = PBXFileReference; lastKnownFileType = wrapper; path = Onboarding; sourceTree = "<group>"; };
 		8FF0E9CB291F7C2500DA2D3D /* Coordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Coordinator.swift; sourceTree = "<group>"; };
 		8FF0E9CD291F7D7000DA2D3D /* InitialSceneCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InitialSceneCoordinator.swift; sourceTree = "<group>"; };
-		8FF0E9D4291FD9D300DA2D3D /* OnboardingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingView.swift; sourceTree = "<group>"; };
 		8FF0E9D8291FDDE100DA2D3D /* OnboardingCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingCoordinator.swift; sourceTree = "<group>"; };
 		E1088D492031E49300889B04 /* Trial.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Trial.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E1088D4C2031E49300889B04 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -62,6 +62,7 @@
 			files = (
 				8FEDC0AC2926302200C461F4 /* TrialCore in Frameworks */,
 				8FEDC0AF2926467B00C461F4 /* Transactions in Frameworks */,
+				8FEDC0B22926520B00C461F4 /* Onboarding in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -119,14 +120,6 @@
 			path = Resources;
 			sourceTree = "<group>";
 		};
-		8FF0E9C6291F7ABD00DA2D3D /* Scenes */ = {
-			isa = PBXGroup;
-			children = (
-				8FF0E9D3291FD9C600DA2D3D /* Onboarding */,
-			);
-			path = Scenes;
-			sourceTree = "<group>";
-		};
 		8FF0E9C7291F7ADF00DA2D3D /* Coordinators */ = {
 			isa = PBXGroup;
 			children = (
@@ -138,17 +131,10 @@
 			path = Coordinators;
 			sourceTree = "<group>";
 		};
-		8FF0E9D3291FD9C600DA2D3D /* Onboarding */ = {
-			isa = PBXGroup;
-			children = (
-				8FF0E9D4291FD9D300DA2D3D /* OnboardingView.swift */,
-			);
-			path = Onboarding;
-			sourceTree = "<group>";
-		};
 		E1088D402031E49300889B04 = {
 			isa = PBXGroup;
 			children = (
+				8FEDC0B0292651E100C461F4 /* Onboarding */,
 				8FEDC0AD292645EB00C461F4 /* Transactions */,
 				8FEDC0A929262F8D00C461F4 /* TrialCore */,
 				E1088D4B2031E49300889B04 /* Trial */,
@@ -172,7 +158,6 @@
 			children = (
 				8FF0E9C2291F790700DA2D3D /* Application */,
 				8FF0E9C7291F7ADF00DA2D3D /* Coordinators */,
-				8FF0E9C6291F7ABD00DA2D3D /* Scenes */,
 				8F4A4CA22920E49500D26A11 /* Utils */,
 			);
 			path = Trial;
@@ -206,6 +191,7 @@
 			packageProductDependencies = (
 				8FEDC0AB2926302200C461F4 /* TrialCore */,
 				8FEDC0AE2926467B00C461F4 /* Transactions */,
+				8FEDC0B12926520B00C461F4 /* Onboarding */,
 			);
 			productName = Trial;
 			productReference = E1088D492031E49300889B04 /* Trial.app */;
@@ -300,7 +286,6 @@
 			files = (
 				E1088D4D2031E49300889B04 /* AppDelegate.swift in Sources */,
 				8FF0E9CC291F7C2500DA2D3D /* Coordinator.swift in Sources */,
-				8FF0E9D5291FD9D300DA2D3D /* OnboardingView.swift in Sources */,
 				8FA2B370291FFD430010BD9B /* TransactionsCoordinator.swift in Sources */,
 				8F4A4CA72920E81900D26A11 /* DependencyInjection.swift in Sources */,
 				8FF0E9CE291F7D7000DA2D3D /* InitialSceneCoordinator.swift in Sources */,
@@ -580,6 +565,10 @@
 		8FEDC0AE2926467B00C461F4 /* Transactions */ = {
 			isa = XCSwiftPackageProductDependency;
 			productName = Transactions;
+		};
+		8FEDC0B12926520B00C461F4 /* Onboarding */ = {
+			isa = XCSwiftPackageProductDependency;
+			productName = Onboarding;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};

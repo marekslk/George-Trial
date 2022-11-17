@@ -9,14 +9,18 @@
 import SwiftUI
 import TrialCore
 
-struct OnboardingView: View, OnEventProtocol {
-    enum Event {
+public struct OnboardingView: View, OnEventProtocol {
+    public enum Event {
         case dismiss
     }
 
-    var onEvent: (Event) -> Void
+    public var onEvent: (Event) -> Void
 
-    var body: some View {
+    public init(onEvent: @escaping (Event) -> Void) {
+        self.onEvent = onEvent
+    }
+
+    public var body: some View {
         VStack {
             Text("👋")
         }

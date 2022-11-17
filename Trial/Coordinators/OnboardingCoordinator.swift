@@ -9,6 +9,7 @@
 import UIKit
 import SwiftUI
 import TrialCore
+import Onboarding
 
 // MARK: InitialSceneCoordinating
 protocol OnboardingCoordinating: Coordinator {
