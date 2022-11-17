@@ -8,7 +8,7 @@ import TrialCore
 import Transactions
 @testable import Trial
 
-class TrialTests: XCTestCase {
+class TransactionsServiceTests: XCTestCase {
     @Locatable private var transactionsService: TransactionsServicing
 
     private var cancellables = Set<AnyCancellable>()

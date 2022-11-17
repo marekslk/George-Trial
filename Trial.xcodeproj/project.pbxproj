@@ -19,7 +19,7 @@
 		E1088D4D2031E49300889B04 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1088D4C2031E49300889B04 /* AppDelegate.swift */; };
 		E1088D542031E49300889B04 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E1088D532031E49300889B04 /* Assets.xcassets */; };
 		E1088D572031E49300889B04 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E1088D552031E49300889B04 /* LaunchScreen.storyboard */; };
-		E1088D622031E49300889B04 /* TrialTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1088D612031E49300889B04 /* TrialTests.swift */; };
+		E1088D622031E49300889B04 /* TransactionsServiceTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1088D612031E49300889B04 /* TransactionsServiceTests.swift */; };
 		E1088D722031F75600889B04 /* transactions.json in Resources */ = {isa = PBXBuildFile; fileRef = E1088D712031F75600889B04 /* transactions.json */; };
 		E12ED191203A0FA400F39631 /* transactions.json in Resources */ = {isa = PBXBuildFile; fileRef = E1088D712031F75600889B04 /* transactions.json */; };
 /* End PBXBuildFile section */
@@ -50,7 +50,7 @@
 		E1088D562031E49300889B04 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		E1088D582031E49300889B04 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		E1088D5D2031E49300889B04 /* TrialTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TrialTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		E1088D612031E49300889B04 /* TrialTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrialTests.swift; sourceTree = "<group>"; };
+		E1088D612031E49300889B04 /* TransactionsServiceTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransactionsServiceTests.swift; sourceTree = "<group>"; };
 		E1088D632031E49300889B04 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		E1088D712031F75600889B04 /* transactions.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = transactions.json; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -166,7 +166,7 @@
 		E1088D602031E49300889B04 /* TrialTests */ = {
 			isa = PBXGroup;
 			children = (
-				E1088D612031E49300889B04 /* TrialTests.swift */,
+				E1088D612031E49300889B04 /* TransactionsServiceTests.swift */,
 				E1088D632031E49300889B04 /* Info.plist */,
 			);
 			path = TrialTests;
@@ -297,7 +297,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				E1088D622031E49300889B04 /* TrialTests.swift in Sources */,
+				E1088D622031E49300889B04 /* TransactionsServiceTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
