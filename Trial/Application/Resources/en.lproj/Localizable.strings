@@ -7,10 +7,5 @@
 */
 
 "transactions.title" = "Transactions";
-"transactions.count" = "Number of transactions:";
-"transactions.balance" = "Balance:";
 
 "transaction.detail.title" = "Transaction Detail";
-
-"retry" = "Retry";
-"loading" = "Loading...";

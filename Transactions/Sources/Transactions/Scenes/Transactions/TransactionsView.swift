@@ -39,7 +39,7 @@ public struct TransactionsView: View, OnEventProtocol {
                 if #available(iOS 14.0, *) {
                     ProgressView()
                 } else {
-                    Text("loading")//.localized)
+                    Text("loading".localized(bundle: .module))
                 }
 
             case .ready(let data):
@@ -77,7 +77,7 @@ public struct TransactionsView: View, OnEventProtocol {
                     Button(action: {
                         viewModel.loadData()
                     }, label: {
-                        Text("retry")//.localized)
+                        Text("retry".localized(bundle: .module))
                     })
                 }
 
@@ -86,6 +86,7 @@ public struct TransactionsView: View, OnEventProtocol {
             }
         }
         .onAppear {
+            guard viewModel.state == nil else { return }
             viewModel.loadData()
         }
     }
@@ -96,8 +97,8 @@ private extension TransactionsView {
     @ViewBuilder
     func balance(balanceFormatted: String) -> some View {
         HStack {
-//            Text("\("transactions.balance".localized) \(balanceFormatted)")
-            Text("transactions.balance \(balanceFormatted)")
+            let balanceTitle = "transactions.count".localized(bundle: .module)
+            Text("\(balanceTitle) \(balanceFormatted)")
                 .foregroundColor(Color.primary)
                 .bold()
 
@@ -109,7 +110,7 @@ private extension TransactionsView {
     @ViewBuilder
     func transactionsInfo(transactionsCount: Int) -> some View {
         HStack {
-            Text("transactions.count")//.localized)
+            Text("transactions.count".localized(bundle: .module))
                 .foregroundColor(Color.primary)
                 .bold()
 

@@ -41,7 +41,7 @@ final class TransactionsCoordinator: TransactionsCoordinating {
         let viewController = UIHostingController(rootView: transactionsView)
         viewController.navigationItem.largeTitleDisplayMode = .always
         // We need to set title for VC here instead of SwiftUI 
-        viewController.title = "transactions.title"//.localized
+        viewController.title = "transactions.title".localized(bundle: .main)
 
         navigationController.setViewControllers([viewController], animated: false)
     }
@@ -49,14 +49,11 @@ final class TransactionsCoordinator: TransactionsCoordinating {
     func showTransactionDetail(transactionRowItem: TransactionRowItem) {
         let transactionDetailView = TransactionDetailView(
             viewModel: TransactionDetailViewModel(transactionRowItem: transactionRowItem),
-            onEvent: { event in
-                switch event {
-                }
-            }
+            onEvent: { _ in }
         )
         let viewController = UIHostingController(rootView: transactionDetailView)
         // We need to set title for VC here instead of SwiftUI
-        viewController.title = "transaction.detail.title"//.localized
+        viewController.title = "transaction.detail.title".localized(bundle: .main)
 
         navigationController.pushViewController(viewController, animated: true)
     }

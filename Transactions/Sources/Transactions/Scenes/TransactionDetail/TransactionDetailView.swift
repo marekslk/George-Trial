@@ -30,7 +30,7 @@ public struct TransactionDetailView: View, OnEventProtocol {
                 if #available(iOS 14.0, *) {
                     ProgressView()
                 } else {
-                    Text("loading")//.localized)
+                    Text("loading".localized(bundle: .module))
                 }
 
             case .ready(let item):
@@ -57,7 +57,7 @@ public struct TransactionDetailView: View, OnEventProtocol {
                     Button(action: {
                         viewModel.loadData()
                     }, label: {
-                        Text("retry")//.localized)
+                        Text("retry".localized(bundle: .module))
                     })
                 }
 

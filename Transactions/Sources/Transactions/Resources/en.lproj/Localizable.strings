@@ -1,0 +1,13 @@
+/* 
+  Localizable.strings
+  
+
+  Created by Marek Slávik on 17.11.2022.
+  
+*/
+
+"transactions.count" = "Number of transactions:";
+"transactions.balance" = "Balance:";
+
+"retry" = "Retry";
+"loading" = "Loading...";
