@@ -9,6 +9,7 @@
 import Foundation
 import Combine
 import SwiftUI
+import TrialCore
 
 final class TransactionDetailViewModel: ObservableObject {
     @Published private(set) var state: ViewModelingState<TransactionRowItem>?

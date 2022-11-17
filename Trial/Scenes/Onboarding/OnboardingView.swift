@@ -7,6 +7,7 @@
 //
 
 import SwiftUI
+import TrialCore
 
 struct OnboardingView: View, OnEventProtocol {
     enum Event {

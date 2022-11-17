@@ -1,5 +1,5 @@
 //
-//  OnEventPorotocol.swift
+//  ViewModelingState.swift
 //  Trial
 //
 //  Created by Marek Slávik on 12.11.2022.
@@ -8,8 +8,8 @@
 
 import Foundation
 
-protocol OnEventProtocol {
-    associatedtype Event
-
-    var onEvent: (Event) -> Void { get }
+public enum ViewModelingState<T> {
+    case loading
+    case ready(value: T)
+    case failed(error: Error)
 }

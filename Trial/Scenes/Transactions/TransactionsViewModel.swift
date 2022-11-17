@@ -9,6 +9,7 @@
 import Foundation
 import Combine
 import SwiftUI
+import TrialCore
 
 // MARK: TransactionsViewModel
 final class TransactionsViewModel: ObservableObject {

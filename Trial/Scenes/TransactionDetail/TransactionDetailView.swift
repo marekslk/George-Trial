@@ -7,6 +7,7 @@
 //
 
 import SwiftUI
+import TrialCore
 
 struct TransactionDetailView: View, OnEventProtocol {
     @ObservedObject var viewModel: TransactionDetailViewModel
