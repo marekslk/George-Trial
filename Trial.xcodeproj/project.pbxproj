@@ -142,7 +142,6 @@
 				8FF0E9D6291FDA4100DA2D3D /* OnEventPorotocol.swift */,
 				8FF0E9D1291FD74200DA2D3D /* UserDefaultsProvider.swift */,
 				8FF0E9CF291FD71800DA2D3D /* UserDefaultWrapper.swift */,
-				8F4A4CA62920E81900D26A11 /* DependencyInjection.swift */,
 				8F4A4CA32920E4A300D26A11 /* DependencyInjection */,
 			);
 			path = Utils;
@@ -151,6 +150,7 @@
 		8F4A4CA32920E4A300D26A11 /* DependencyInjection */ = {
 			isa = PBXGroup;
 			children = (
+				8F4A4CA62920E81900D26A11 /* DependencyInjection.swift */,
 				8F4A4CA42920E4B000D26A11 /* Locator.swift */,
 			);
 			path = DependencyInjection;

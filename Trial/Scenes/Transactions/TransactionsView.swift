@@ -71,6 +71,7 @@ struct TransactionsView: View, OnEventProtocol {
             case .failed(let error):
                 VStack(spacing: 24) {
                     Text(error.localizedDescription)
+                        .multilineTextAlignment(.center)
 
                     Button(action: {
                         viewModel.loadData()
