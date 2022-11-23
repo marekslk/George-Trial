@@ -106,7 +106,7 @@ private extension TransactionsView {
         }
     }
 
-    // MARK: balance
+    // MARK: transactionsInfo
     @ViewBuilder
     func transactionsInfo(transactionsCount: Int) -> some View {
         HStack {

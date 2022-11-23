@@ -38,6 +38,7 @@ private extension InitialSceneCoordinator {
 
     func setupInitialScene() {
         let transactionsCoordinator = TransactionsCoordinator(parent: self, navigationController: navigationController)
+        childCoordinators.append(transactionsCoordinator)
         transactionsCoordinator.start()
 
         window.rootViewController = navigationController

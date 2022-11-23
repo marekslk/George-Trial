@@ -31,10 +31,10 @@ final class TransactionsCoordinator: TransactionsCoordinating {
     func start() {
         let transactionsView = TransactionsView(
             viewModel: TransactionsViewModel(),
-            onEvent: { event in
+            onEvent: { [weak self] event in
                 switch event {
                 case .detail(let transactionRowItem):
-                    self.showTransactionDetail(transactionRowItem: transactionRowItem)
+                    self?.showTransactionDetail(transactionRowItem: transactionRowItem)
                 }
             }
         )
